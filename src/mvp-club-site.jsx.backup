@@ -115,14 +115,15 @@ const MVPClubWebsite = () => {
       <nav
         className="fixed top-0 left-0 right-0 z-50 py-4"
         style={{
-          backgroundColor: 'var(--color-primary)'
+          backgroundColor: 'rgba(26, 54, 93, 0.98)',
+          backdropFilter: 'blur(10px)'
         }}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <div
             className="font-display text-2xl font-medium cursor-pointer"
-            style={{ color: 'var(--color-accent-lifted)' }}
+            style={{ color: '#fbbf24' }}
             onClick={() => scrollToSection('hero')}
           >
             MVP Club
@@ -134,12 +135,10 @@ const MVPClubWebsite = () => {
               <button
                 key={section.id}
                 onClick={() => scrollToSection(section.id)}
-                className="text-sm font-medium transition-colors duration-200"
+                className="text-sm font-medium transition-colors duration-200 hover:text-[#fbbf24]"
                 style={{
                   color: 'rgba(255,255,255,0.8)'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-accent-lifted)'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.8)'}
               >
                 {section.label}
               </button>
@@ -147,7 +146,7 @@ const MVPClubWebsite = () => {
             <button
               onClick={() => scrollToSection('contact')}
               className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200"
-              style={{ backgroundColor: 'var(--color-accent)', color: 'white' }}
+              style={{ backgroundColor: '#d97706', color: 'white' }}
             >
               Get Started
             </button>
@@ -167,7 +166,7 @@ const MVPClubWebsite = () => {
         {menuOpen && (
           <div 
             className="lg:hidden absolute top-full left-0 right-0 py-6 px-6"
-            style={{ backgroundColor: 'var(--color-primary)' }}
+            style={{ backgroundColor: '#1a365d' }}
           >
             {sections.map((section) => (
               <button
@@ -186,17 +185,17 @@ const MVPClubWebsite = () => {
       <section 
         id="hero" 
         className="min-h-screen flex items-center relative overflow-hidden"
-        style={{ backgroundColor: 'var(--color-primary)' }}
+        style={{ backgroundColor: '#1a365d' }}
       >
         {/* Background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div 
             className="absolute top-20 right-10 w-96 h-96 rounded-full opacity-10 animate-float"
-            style={{ backgroundColor: 'var(--color-secondary)' }}
+            style={{ backgroundColor: '#115e59' }}
           />
           <div 
             className="absolute bottom-20 left-10 w-64 h-64 rounded-full opacity-10 animate-float"
-            style={{ backgroundColor: 'var(--color-accent)', animationDelay: '-2s' }}
+            style={{ backgroundColor: '#d97706', animationDelay: '-2s' }}
           />
         </div>
 
@@ -206,7 +205,7 @@ const MVPClubWebsite = () => {
               <AnimatedSection>
                 <p 
                   className="text-sm font-semibold uppercase tracking-wider mb-4"
-                  style={{ color: 'var(--color-accent-lifted)' }}
+                  style={{ color: '#fbbf24' }}
                 >
                   Strategic AI Transformation
                 </p>
@@ -232,7 +231,7 @@ const MVPClubWebsite = () => {
                   <button
                     onClick={() => scrollToSection('organizations')}
                     className="px-8 py-4 rounded-lg text-white font-semibold transition-all duration-200 hover:scale-105"
-                    style={{ backgroundColor: 'var(--color-accent)' }}
+                    style={{ backgroundColor: '#d97706' }}
                   >
                     Transform Your Organization
                   </button>
@@ -262,9 +261,9 @@ const MVPClubWebsite = () => {
                   <div className="flex items-center gap-6">
                     <div 
                       className="w-16 h-16 rounded-full flex items-center justify-center"
-                      style={{ backgroundColor: 'var(--color-accent-lifted)' }}
+                      style={{ backgroundColor: '#fbbf24' }}
                     >
-                      <Users size={28} style={{ color: 'var(--color-primary)' }} />
+                      <Users size={28} style={{ color: '#1a365d' }} />
                     </div>
                     <div className="flex-1">
                       <div className="text-white font-display text-xl mb-1">Human</div>
@@ -276,7 +275,7 @@ const MVPClubWebsite = () => {
                     <div className="w-12 h-0.5 bg-white/20" />
                     <div 
                       className="px-4 py-1 rounded-full text-sm font-medium mx-4"
-                      style={{ backgroundColor: 'var(--color-accent)', color: 'white' }}
+                      style={{ backgroundColor: '#d97706', color: 'white' }}
                     >
                       +
                     </div>
@@ -286,9 +285,9 @@ const MVPClubWebsite = () => {
                   <div className="flex items-center gap-6">
                     <div 
                       className="w-16 h-16 rounded-full flex items-center justify-center"
-                      style={{ backgroundColor: 'var(--color-secondary)' }}
+                      style={{ backgroundColor: '#115e59' }}
                     >
-                      <Sparkles size={28} style={{ color: 'var(--color-accent-lifted)' }} />
+                      <Sparkles size={28} style={{ color: '#fbbf24' }} />
                     </div>
                     <div className="flex-1">
                       <div className="text-white font-display text-xl mb-1">AI</div>
@@ -307,6 +306,14 @@ const MVPClubWebsite = () => {
               </div>
             </AnimatedSection>
           </div>
+
+          {/* Scroll indicator */}
+          <AnimatedSection delay={600}>
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/50">
+              <span className="text-xs uppercase tracking-wider mb-2">Explore</span>
+              <ChevronDown size={20} className="animate-bounce" />
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -317,11 +324,11 @@ const MVPClubWebsite = () => {
             <div className="text-center max-w-3xl mx-auto mb-16">
               <p 
                 className="text-sm font-semibold uppercase tracking-wider mb-4"
-                style={{ color: 'var(--color-secondary)' }}
+                style={{ color: '#115e59' }}
               >
                 The AI Adoption Crisis
               </p>
-              <h2 className="font-display text-3xl md:text-4xl mb-6" style={{ color: 'var(--color-primary)' }}>
+              <h2 className="font-display text-3xl md:text-4xl mb-6" style={{ color: '#1a365d' }}>
                 You Have the Tools. Where's the Transformation?
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
@@ -337,19 +344,19 @@ const MVPClubWebsite = () => {
                 stat: '10%',
                 label: 'of employees use AI for high-value tasks',
                 subtext: 'Despite having enterprise-wide access',
-                color: 'var(--color-accent-soft)'
+                color: '#f87171'
               },
               {
                 stat: '$47B',
                 label: 'spent on AI tools by 2025',
                 subtext: 'Most investments failing to deliver ROI',
-                color: 'var(--color-accent)'
+                color: '#d97706'
               },
               {
                 stat: '73%',
                 label: 'report "AI anxiety" at work',
                 subtext: 'Uncertain how to integrate AI meaningfully',
-                color: 'var(--color-secondary)'
+                color: '#115e59'
               }
             ].map((item, i) => (
               <AnimatedSection key={i} delay={i * 100}>
@@ -363,7 +370,7 @@ const MVPClubWebsite = () => {
                   >
                     {item.stat}
                   </div>
-                  <div className="font-semibold mb-2" style={{ color: 'var(--color-primary)' }}>
+                  <div className="font-semibold mb-2" style={{ color: '#1a365d' }}>
                     {item.label}
                   </div>
                   <div className="text-sm text-gray-500">{item.subtext}</div>
@@ -376,11 +383,11 @@ const MVPClubWebsite = () => {
           <AnimatedSection>
             <div 
               className="rounded-2xl p-8 md:p-12"
-              style={{ backgroundColor: 'var(--color-primary-tint-solid)' }}
+              style={{ backgroundColor: '#eff6ff' }}
             >
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h3 className="font-display text-2xl mb-4" style={{ color: 'var(--color-primary)' }}>
+                  <h3 className="font-display text-2xl mb-4" style={{ color: '#1a365d' }}>
                     Why Traditional Approaches Fail
                   </h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">
@@ -398,7 +405,7 @@ const MVPClubWebsite = () => {
                       <div key={i} className="flex items-start gap-3">
                         <div 
                           className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                          style={{ backgroundColor: 'var(--color-accent-soft)' }}
+                          style={{ backgroundColor: '#f87171' }}
                         >
                           <X size={12} color="white" />
                         </div>
@@ -415,7 +422,7 @@ const MVPClubWebsite = () => {
                   <div className="text-center mb-4">
                     <span 
                       className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider"
-                      style={{ backgroundColor: 'var(--color-accent-tint-solid)', color: 'var(--color-accent)' }}
+                      style={{ backgroundColor: '#fef3c7', color: '#d97706' }}
                     >
                       The Transformation Required
                     </span>
@@ -423,23 +430,23 @@ const MVPClubWebsite = () => {
                   <div className="space-y-4">
                     <div className="flex items-center gap-4">
                       <div className="flex-1 text-right text-gray-500">Traditional Software</div>
-                      <ArrowRight size={16} style={{ color: 'var(--color-accent)' }} />
-                      <div className="flex-1 font-semibold" style={{ color: 'var(--color-primary)' }}>AI Systems</div>
+                      <ArrowRight size={16} style={{ color: '#d97706' }} />
+                      <div className="flex-1 font-semibold" style={{ color: '#1a365d' }}>AI Systems</div>
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="flex-1 text-right text-gray-500">User operates tool</div>
-                      <ArrowRight size={16} style={{ color: 'var(--color-accent)' }} />
-                      <div className="flex-1 font-semibold" style={{ color: 'var(--color-primary)' }}>Manager collaborates</div>
+                      <ArrowRight size={16} style={{ color: '#d97706' }} />
+                      <div className="flex-1 font-semibold" style={{ color: '#1a365d' }}>Manager collaborates</div>
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="flex-1 text-right text-gray-500">One-time training</div>
-                      <ArrowRight size={16} style={{ color: 'var(--color-accent)' }} />
-                      <div className="flex-1 font-semibold" style={{ color: 'var(--color-primary)' }}>Continuous practice</div>
+                      <ArrowRight size={16} style={{ color: '#d97706' }} />
+                      <div className="flex-1 font-semibold" style={{ color: '#1a365d' }}>Continuous practice</div>
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="flex-1 text-right text-gray-500">Predictable outputs</div>
-                      <ArrowRight size={16} style={{ color: 'var(--color-accent)' }} />
-                      <div className="flex-1 font-semibold" style={{ color: 'var(--color-primary)' }}>Creative potential</div>
+                      <ArrowRight size={16} style={{ color: '#d97706' }} />
+                      <div className="flex-1 font-semibold" style={{ color: '#1a365d' }}>Creative potential</div>
                     </div>
                   </div>
                 </div>
@@ -450,13 +457,13 @@ const MVPClubWebsite = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section id="philosophy" className="py-24" style={{ backgroundColor: 'var(--color-secondary)' }}>
+      <section id="philosophy" className="py-24" style={{ backgroundColor: '#115e59' }}>
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <p 
                 className="text-sm font-semibold uppercase tracking-wider mb-4"
-                style={{ color: 'var(--color-accent-lifted)' }}
+                style={{ color: '#fbbf24' }}
               >
                 Our Philosophy
               </p>
@@ -481,9 +488,9 @@ const MVPClubWebsite = () => {
                 <div className="flex items-center gap-4 mb-6">
                   <div 
                     className="w-14 h-14 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: 'var(--color-accent-lifted)' }}
+                    style={{ backgroundColor: '#fbbf24' }}
                   >
-                    <Users size={24} style={{ color: 'var(--color-primary)' }} />
+                    <Users size={24} style={{ color: '#1a365d' }} />
                   </div>
                   <div>
                     <h3 className="font-display text-xl text-white">Human Strengths</h3>
@@ -499,7 +506,7 @@ const MVPClubWebsite = () => {
                     'Final evaluation and refinement'
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <CheckCircle2 size={18} style={{ color: 'var(--color-accent-lifted)' }} className="flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 size={18} style={{ color: '#fbbf24' }} className="flex-shrink-0 mt-0.5" />
                       <span className="text-white/90">{item}</span>
                     </div>
                   ))}
@@ -516,9 +523,9 @@ const MVPClubWebsite = () => {
                 <div className="flex items-center gap-4 mb-6">
                   <div 
                     className="w-14 h-14 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: 'var(--color-secondary)', border: '2px solid #fbbf24' }}
+                    style={{ backgroundColor: '#115e59', border: '2px solid #fbbf24' }}
                   >
-                    <Sparkles size={24} style={{ color: 'var(--color-accent-lifted)' }} />
+                    <Sparkles size={24} style={{ color: '#fbbf24' }} />
                   </div>
                   <div>
                     <h3 className="font-display text-xl text-white">AI Strengths</h3>
@@ -534,7 +541,7 @@ const MVPClubWebsite = () => {
                     'Tireless iteration and variation'
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <Zap size={18} style={{ color: 'var(--color-accent-lifted)' }} className="flex-shrink-0 mt-0.5" />
+                      <Zap size={18} style={{ color: '#fbbf24' }} className="flex-shrink-0 mt-0.5" />
                       <span className="text-white/90">{item}</span>
                     </div>
                   ))}
@@ -558,7 +565,7 @@ const MVPClubWebsite = () => {
                 ].map((flow, i) => (
                   <div key={i} className="flex items-center justify-center gap-3">
                     <span className="text-white/80">{flow.human}</span>
-                    <ArrowRight size={16} style={{ color: 'var(--color-accent-lifted)' }} />
+                    <ArrowRight size={16} style={{ color: '#fbbf24' }} />
                     <span className="text-white font-semibold">{flow.ai}</span>
                   </div>
                 ))}
@@ -591,7 +598,7 @@ const MVPClubWebsite = () => {
                     className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4"
                     style={{ backgroundColor: 'rgba(251, 191, 36, 0.2)' }}
                   >
-                    <principle.icon size={24} style={{ color: 'var(--color-accent-lifted)' }} />
+                    <principle.icon size={24} style={{ color: '#fbbf24' }} />
                   </div>
                   <h4 className="font-display text-lg text-white mb-2">{principle.title}</h4>
                   <p className="text-white/70 text-sm">{principle.desc}</p>
@@ -609,11 +616,11 @@ const MVPClubWebsite = () => {
             <div className="text-center max-w-3xl mx-auto mb-16">
               <p 
                 className="text-sm font-semibold uppercase tracking-wider mb-4"
-                style={{ color: 'var(--color-secondary)' }}
+                style={{ color: '#115e59' }}
               >
                 Our Methodology
               </p>
-              <h2 className="font-display text-3xl md:text-4xl mb-6" style={{ color: 'var(--color-primary)' }}>
+              <h2 className="font-display text-3xl md:text-4xl mb-6" style={{ color: '#1a365d' }}>
                 The Work Loop: Your Operating System for Human + AI Collaboration
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
@@ -632,37 +639,37 @@ const MVPClubWebsite = () => {
                     num: '01', 
                     title: 'Articulate', 
                     desc: 'Define what you actually need-the real outcome, not just the surface request',
-                    color: 'var(--color-primary)'
+                    color: '#1a365d'
                   },
                   { 
                     num: '02', 
                     title: 'Build', 
                     desc: 'Gather context, examples, and constraints that will shape the output',
-                    color: 'var(--color-secondary)'
+                    color: '#115e59'
                   },
                   { 
                     num: '03', 
                     title: 'Prompt', 
                     desc: 'Craft your request with clarity, specificity, and the right level of structure',
-                    color: 'var(--color-accent)'
+                    color: '#d97706'
                   },
                   { 
                     num: '04', 
                     title: 'Execute', 
                     desc: 'Run the prompt and generate initial outputs',
-                    color: 'var(--color-secondary-lifted)'
+                    color: '#5a8a7a'
                   },
                   {
                     num: '05',
                     title: 'Evaluate',
                     desc: "Apply your judgment-what works? What doesn't? What's missing?",
-                    color: 'var(--color-primary-lifted)'
+                    color: '#2563eb'
                   },
                   { 
                     num: '06', 
                     title: 'Iterate', 
                     desc: 'Refine based on evaluation. Loop back as needed until you hit the target.',
-                    color: 'var(--color-accent-soft)'
+                    color: '#f87171'
                   }
                 ].map((step, i) => (
                   <AnimatedSection key={i} delay={i * 100}>
@@ -678,7 +685,7 @@ const MVPClubWebsite = () => {
                       </div>
                       <h4 
                         className="font-display text-lg mb-2"
-                        style={{ color: 'var(--color-primary)' }}
+                        style={{ color: '#1a365d' }}
                       >
                         {step.title}
                       </h4>
@@ -692,10 +699,10 @@ const MVPClubWebsite = () => {
               <div className="mt-8 flex justify-center">
                 <div 
                   className="inline-flex items-center gap-3 px-6 py-3 rounded-full"
-                  style={{ backgroundColor: 'var(--color-accent-tint-solid)' }}
+                  style={{ backgroundColor: '#fef3c7' }}
                 >
-                  <RefreshCw size={18} style={{ color: 'var(--color-accent)' }} />
-                  <span className="font-medium" style={{ color: 'var(--color-primary)' }}>
+                  <RefreshCw size={18} style={{ color: '#d97706' }} />
+                  <span className="font-medium" style={{ color: '#1a365d' }}>
                     Continuous improvement through iteration
                   </span>
                 </div>
@@ -707,7 +714,7 @@ const MVPClubWebsite = () => {
           <AnimatedSection>
             <div className="mt-16 grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="font-display text-2xl mb-4" style={{ color: 'var(--color-primary)' }}>
+                <h3 className="font-display text-2xl mb-4" style={{ color: '#1a365d' }}>
                   Why Most People Skip Steps 1-2
                 </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
@@ -722,9 +729,9 @@ const MVPClubWebsite = () => {
               </div>
               <div 
                 className="p-6 rounded-xl"
-                style={{ backgroundColor: 'var(--color-secondary-tint-solid)' }}
+                style={{ backgroundColor: '#f0fdfa' }}
               >
-                <div className="font-display text-lg mb-4" style={{ color: 'var(--color-secondary)' }}>
+                <div className="font-display text-lg mb-4" style={{ color: '#115e59' }}>
                   The "Good Enough" Mindset
                 </div>
                 <p className="text-gray-600 text-sm mb-4">
@@ -734,7 +741,7 @@ const MVPClubWebsite = () => {
                 </p>
                 <div 
                   className="px-4 py-2 rounded-lg inline-block text-sm font-medium"
-                  style={{ backgroundColor: 'var(--color-secondary)', color: 'var(--color-accent-lifted)' }}
+                  style={{ backgroundColor: '#115e59', color: '#fbbf24' }}
                 >
                   "Done is better than perfect-iteration makes it better than done."
                 </div>
@@ -745,14 +752,14 @@ const MVPClubWebsite = () => {
       </section>
 
       {/* For Organizations Section */}
-      <section id="organizations" className="py-24" style={{ backgroundColor: 'var(--color-primary)' }}>
+      <section id="organizations" className="py-24" style={{ backgroundColor: '#1a365d' }}>
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="flex items-center gap-3 mb-4">
-              <Building2 size={24} style={{ color: 'var(--color-accent-lifted)' }} />
+              <Building2 size={24} style={{ color: '#fbbf24' }} />
               <p 
                 className="text-sm font-semibold uppercase tracking-wider"
-                style={{ color: 'var(--color-accent-lifted)' }}
+                style={{ color: '#fbbf24' }}
               >
                 For Organizations
               </p>
@@ -813,7 +820,7 @@ const MVPClubWebsite = () => {
                 >
                   <div 
                     className="text-xs font-semibold uppercase tracking-wider mb-2"
-                    style={{ color: 'var(--color-accent-lifted)' }}
+                    style={{ color: '#fbbf24' }}
                   >
                     {phase.weeks}
                   </div>
@@ -821,7 +828,7 @@ const MVPClubWebsite = () => {
                   <div className="space-y-2">
                     {phase.activities.map((activity, j) => (
                       <div key={j} className="flex items-start gap-2">
-                        <CheckCircle2 size={14} style={{ color: 'var(--color-secondary-lifted)' }} className="flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 size={14} style={{ color: '#5a8a7a' }} className="flex-shrink-0 mt-0.5" />
                         <span className="text-white/70 text-sm">{activity}</span>
                       </div>
                     ))}
@@ -869,7 +876,7 @@ const MVPClubWebsite = () => {
 
               <div 
                 className="p-8 rounded-xl"
-                style={{ backgroundColor: 'var(--color-secondary)' }}
+                style={{ backgroundColor: '#115e59' }}
               >
                 <h3 className="font-display text-xl text-white mb-6">Target Outcomes</h3>
                 <div className="space-y-6">
@@ -884,7 +891,7 @@ const MVPClubWebsite = () => {
                         className="w-10 h-10 rounded-lg flex items-center justify-center"
                         style={{ backgroundColor: 'rgba(251, 191, 36, 0.2)' }}
                       >
-                        <outcome.icon size={20} style={{ color: 'var(--color-accent-lifted)' }} />
+                        <outcome.icon size={20} style={{ color: '#fbbf24' }} />
                       </div>
                       <span className="text-white">{outcome.label}</span>
                     </div>
@@ -894,7 +901,7 @@ const MVPClubWebsite = () => {
                 <button
                   onClick={() => scrollToSection('contact')}
                   className="mt-8 w-full py-4 rounded-lg font-semibold transition-all duration-200 hover:scale-105"
-                  style={{ backgroundColor: 'var(--color-accent)', color: 'white' }}
+                  style={{ backgroundColor: '#d97706', color: 'white' }}
                 >
                   Schedule a Discovery Call
                 </button>
@@ -905,19 +912,19 @@ const MVPClubWebsite = () => {
       </section>
 
       {/* For Practitioners Section */}
-      <section id="practitioners" className="py-24" style={{ backgroundColor: 'var(--color-secondary-tint-solid)' }}>
+      <section id="practitioners" className="py-24" style={{ backgroundColor: '#f0fdfa' }}>
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="flex items-center gap-3 mb-4">
-              <GraduationCap size={24} style={{ color: 'var(--color-secondary)' }} />
+              <GraduationCap size={24} style={{ color: '#115e59' }} />
               <p 
                 className="text-sm font-semibold uppercase tracking-wider"
-                style={{ color: 'var(--color-secondary)' }}
+                style={{ color: '#115e59' }}
               >
                 For Practitioners
               </p>
             </div>
-            <h2 className="font-display text-3xl md:text-4xl mb-6 max-w-2xl" style={{ color: 'var(--color-primary)' }}>
+            <h2 className="font-display text-3xl md:text-4xl mb-6 max-w-2xl" style={{ color: '#1a365d' }}>
               Join the AI-First Practitioner Community
             </h2>
             <p className="text-lg text-gray-600 mb-12 max-w-2xl leading-relaxed">
@@ -951,18 +958,18 @@ const MVPClubWebsite = () => {
                 <div className="card-hover bg-white p-8 rounded-2xl h-full">
                   <div 
                     className="w-14 h-14 rounded-xl flex items-center justify-center mb-6"
-                    style={{ backgroundColor: 'var(--color-secondary-tint-solid)' }}
+                    style={{ backgroundColor: '#f0fdfa' }}
                   >
-                    <offering.icon size={28} style={{ color: 'var(--color-secondary)' }} />
+                    <offering.icon size={28} style={{ color: '#115e59' }} />
                   </div>
-                  <h3 className="font-display text-xl mb-3" style={{ color: 'var(--color-primary)' }}>
+                  <h3 className="font-display text-xl mb-3" style={{ color: '#1a365d' }}>
                     {offering.title}
                   </h3>
                   <p className="text-gray-600 mb-6">{offering.desc}</p>
                   <div className="space-y-2">
                     {offering.features.map((feature, j) => (
                       <div key={j} className="flex items-start gap-2">
-                        <CheckCircle2 size={16} style={{ color: 'var(--color-secondary)' }} className="flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 size={16} style={{ color: '#115e59' }} className="flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-gray-700">{feature}</span>
                       </div>
                     ))}
@@ -976,7 +983,7 @@ const MVPClubWebsite = () => {
           <AnimatedSection>
             <div 
               className="p-8 md:p-12 rounded-2xl text-center"
-              style={{ backgroundColor: 'var(--color-secondary)' }}
+              style={{ backgroundColor: '#115e59' }}
             >
               <h3 className="font-display text-2xl text-white mb-4">
                 Start Building Real AI Skills Today
@@ -988,7 +995,7 @@ const MVPClubWebsite = () => {
               <button
                 onClick={() => scrollToSection('contact')}
                 className="px-8 py-4 rounded-lg font-semibold transition-all duration-200 hover:scale-105"
-                style={{ backgroundColor: 'var(--color-accent-lifted)', color: 'var(--color-primary)' }}
+                style={{ backgroundColor: '#fbbf24', color: '#1a365d' }}
               >
                 Join the Community
               </button>
@@ -1004,11 +1011,11 @@ const MVPClubWebsite = () => {
             <div className="text-center max-w-3xl mx-auto mb-16">
               <p 
                 className="text-sm font-semibold uppercase tracking-wider mb-4"
-                style={{ color: 'var(--color-secondary)' }}
+                style={{ color: '#115e59' }}
               >
                 About Us
               </p>
-              <h2 className="font-display text-3xl md:text-4xl mb-6" style={{ color: 'var(--color-primary)' }}>
+              <h2 className="font-display text-3xl md:text-4xl mb-6" style={{ color: '#1a365d' }}>
                 Meet the Team
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
@@ -1044,21 +1051,21 @@ const MVPClubWebsite = () => {
                   {/* Placeholder avatar */}
                   <div 
                     className="w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center"
-                    style={{ backgroundColor: i === 0 ? 'var(--color-primary)' : i === 1 ? 'var(--color-secondary)' : 'var(--color-secondary-lifted)' }}
+                    style={{ backgroundColor: i === 0 ? '#1a365d' : i === 1 ? '#115e59' : '#5a8a7a' }}
                   >
-                    <Users size={40} style={{ color: 'var(--color-accent-lifted)' }} />
+                    <Users size={40} style={{ color: '#fbbf24' }} />
                   </div>
-                  <h3 className="font-display text-xl mb-1" style={{ color: 'var(--color-primary)' }}>
+                  <h3 className="font-display text-xl mb-1" style={{ color: '#1a365d' }}>
                     {member.name}
                   </h3>
-                  <p className="text-sm mb-4" style={{ color: 'var(--color-secondary)' }}>{member.role}</p>
+                  <p className="text-sm mb-4" style={{ color: '#115e59' }}>{member.role}</p>
                   <p className="text-gray-600 text-sm mb-6">{member.bio}</p>
                   <div className="flex flex-wrap justify-center gap-2">
                     {member.expertise.map((skill, j) => (
                       <span 
                         key={j}
                         className="px-3 py-1 rounded-full text-xs"
-                        style={{ backgroundColor: 'var(--color-secondary-tint-solid)', color: 'var(--color-secondary)' }}
+                        style={{ backgroundColor: '#f0fdfa', color: '#115e59' }}
                       >
                         {skill}
                       </span>
@@ -1072,17 +1079,17 @@ const MVPClubWebsite = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-24" style={{ backgroundColor: 'var(--color-primary-tint-solid)' }}>
+      <section id="testimonials" className="py-24" style={{ backgroundColor: '#eff6ff' }}>
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <p 
                 className="text-sm font-semibold uppercase tracking-wider mb-4"
-                style={{ color: 'var(--color-primary-lifted)' }}
+                style={{ color: '#2563eb' }}
               >
                 Community Voices
               </p>
-              <h2 className="font-display text-3xl md:text-4xl mb-6" style={{ color: 'var(--color-primary)' }}>
+              <h2 className="font-display text-3xl md:text-4xl mb-6" style={{ color: '#1a365d' }}>
                 What Our Community Says
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
@@ -1096,7 +1103,7 @@ const MVPClubWebsite = () => {
           <AnimatedSection>
             <div 
               className="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 rounded-2xl mb-16"
-              style={{ backgroundColor: 'var(--color-primary)' }}
+              style={{ backgroundColor: '#1a365d' }}
             >
               {[
                 { stat: '50+', label: 'Community Members' },
@@ -1105,7 +1112,7 @@ const MVPClubWebsite = () => {
                 { stat: '1 Year', label: 'Building Together' }
               ].map((item, i) => (
                 <div key={i} className="text-center">
-                  <div className="font-display text-3xl mb-1" style={{ color: 'var(--color-accent-lifted)' }}>
+                  <div className="font-display text-3xl mb-1" style={{ color: '#fbbf24' }}>
                     {item.stat}
                   </div>
                   <div className="text-white/70 text-sm">{item.label}</div>
@@ -1156,20 +1163,20 @@ const MVPClubWebsite = () => {
             ].map((testimonial, i) => (
               <AnimatedSection key={i} delay={i * 100}>
                 <div className="card-hover bg-white p-6 rounded-xl h-full flex flex-col">
-                  <Quote size={24} style={{ color: 'var(--color-accent)' }} className="mb-4 opacity-50" />
+                  <Quote size={24} style={{ color: '#d97706' }} className="mb-4 opacity-50" />
                   <p className="text-gray-700 mb-6 flex-grow leading-relaxed">
                     "{testimonial.quote}"
                   </p>
                   <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                     <div>
-                      <div className="font-semibold text-sm" style={{ color: 'var(--color-primary)' }}>
+                      <div className="font-semibold text-sm" style={{ color: '#1a365d' }}>
                         {testimonial.name}
                       </div>
                       <div className="text-gray-500 text-xs">{testimonial.role}</div>
                     </div>
                     <span 
                       className="px-2 py-1 rounded text-xs"
-                      style={{ backgroundColor: 'var(--color-accent-tint-solid)', color: 'var(--color-accent)' }}
+                      style={{ backgroundColor: '#fef3c7', color: '#d97706' }}
                     >
                       {testimonial.highlight}
                     </span>
@@ -1182,7 +1189,7 @@ const MVPClubWebsite = () => {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-24" style={{ backgroundColor: 'var(--color-secondary)' }}>
+      <section id="contact" className="py-24" style={{ backgroundColor: '#115e59' }}>
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-12">
@@ -1202,11 +1209,11 @@ const MVPClubWebsite = () => {
               <div className="bg-white p-8 rounded-2xl h-full flex flex-col">
                 <div 
                   className="w-14 h-14 rounded-xl flex items-center justify-center mb-6"
-                  style={{ backgroundColor: 'var(--color-primary-tint-solid)' }}
+                  style={{ backgroundColor: '#eff6ff' }}
                 >
-                  <Building2 size={28} style={{ color: 'var(--color-primary)' }} />
+                  <Building2 size={28} style={{ color: '#1a365d' }} />
                 </div>
-                <h3 className="font-display text-xl mb-3" style={{ color: 'var(--color-primary)' }}>
+                <h3 className="font-display text-xl mb-3" style={{ color: '#1a365d' }}>
                   For Organizations
                 </h3>
                 <p className="text-gray-600 mb-6 flex-grow">
@@ -1217,7 +1224,7 @@ const MVPClubWebsite = () => {
                 <div className="space-y-3 mb-6">
                   {['30-minute discovery call', 'Custom scope assessment', 'No commitment required'].map((item, i) => (
                     <div key={i} className="flex items-center gap-2">
-                      <CheckCircle2 size={16} style={{ color: 'var(--color-secondary)' }} />
+                      <CheckCircle2 size={16} style={{ color: '#115e59' }} />
                       <span className="text-sm text-gray-700">{item}</span>
                     </div>
                   ))}
@@ -1227,7 +1234,7 @@ const MVPClubWebsite = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full py-4 rounded-lg font-semibold text-center transition-all duration-200 hover:scale-105"
-                  style={{ backgroundColor: 'var(--color-primary)', color: 'white' }}
+                  style={{ backgroundColor: '#1a365d', color: 'white' }}
                 >
                   Book a Discovery Call
                 </a>
@@ -1239,11 +1246,11 @@ const MVPClubWebsite = () => {
               <div className="bg-white p-8 rounded-2xl h-full flex flex-col">
                 <div 
                   className="w-14 h-14 rounded-xl flex items-center justify-center mb-6"
-                  style={{ backgroundColor: 'var(--color-secondary-tint-solid)' }}
+                  style={{ backgroundColor: '#f0fdfa' }}
                 >
-                  <MessageCircle size={28} style={{ color: 'var(--color-secondary)' }} />
+                  <MessageCircle size={28} style={{ color: '#115e59' }} />
                 </div>
-                <h3 className="font-display text-xl mb-3" style={{ color: 'var(--color-primary)' }}>
+                <h3 className="font-display text-xl mb-3" style={{ color: '#1a365d' }}>
                   For Practitioners
                 </h3>
                 <p className="text-gray-600 mb-6 flex-grow">
@@ -1254,7 +1261,7 @@ const MVPClubWebsite = () => {
                 <div className="space-y-3 mb-6">
                   {['Immediate community access', 'Self-paced courses', 'Live workshops & events'].map((item, i) => (
                     <div key={i} className="flex items-center gap-2">
-                      <CheckCircle2 size={16} style={{ color: 'var(--color-secondary)' }} />
+                      <CheckCircle2 size={16} style={{ color: '#115e59' }} />
                       <span className="text-sm text-gray-700">{item}</span>
                     </div>
                   ))}
@@ -1264,7 +1271,7 @@ const MVPClubWebsite = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full py-4 rounded-lg font-semibold text-center transition-all duration-200 hover:scale-105"
-                  style={{ backgroundColor: 'var(--color-accent)', color: 'white' }}
+                  style={{ backgroundColor: '#d97706', color: 'white' }}
                 >
                   Join the Community
                 </a>
@@ -1280,7 +1287,7 @@ const MVPClubWebsite = () => {
                 <a 
                   href="mailto:hello@mvpclub.co"
                   className="underline hover:text-white transition-colors"
-                  style={{ color: 'var(--color-accent-lifted)' }}
+                  style={{ color: '#fbbf24' }}
                 >
                   hello@mvpclub.co
                 </a>
@@ -1291,10 +1298,10 @@ const MVPClubWebsite = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12" style={{ backgroundColor: 'var(--color-primary)' }}>
+      <footer className="py-12" style={{ backgroundColor: '#1a365d' }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="font-display text-xl" style={{ color: 'var(--color-accent-lifted)' }}>
+            <div className="font-display text-xl" style={{ color: '#fbbf24' }}>
               MVP Club Consulting
             </div>
             <div className="flex items-center gap-8">
