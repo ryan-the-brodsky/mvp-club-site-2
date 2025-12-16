@@ -126,14 +126,14 @@ const AnimatedValley = () => {
   const pathDip3ToFluency = `M ${points.dip3.x} ${points.dip3.y} C 600 190, 630 145, ${points.fluency.x} ${points.fluency.y}`;
   const pathFluencyToMastery = `M ${points.fluency.x} ${points.fluency.y} C 680 120, 700 95, ${points.mastery.x} ${points.mastery.y}`;
 
-  // Muted background - lighter, warmer version of primary
-  const sectionBg = 'var(--color-background, #faf5f0)';
+  // Dark background matching hero section
+  const sectionBg = 'var(--color-primary)';
 
   return (
     <section
       id="journey"
       ref={sectionRef}
-      className="py-28"
+      className="pt-16 pb-24"
       style={{ backgroundColor: sectionBg }}
     >
       <style>{`
@@ -213,16 +213,15 @@ const AnimatedValley = () => {
         }`}
       >
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <p
-            className="text-sm font-semibold uppercase tracking-widest mb-4"
+            className="text-2xl md:text-3xl font-bold uppercase tracking-wide mb-6"
             style={{ color: themeColors.secondary }}
           >
             The Adoption Paradox
           </p>
           <h2
-            className="font-display text-3xl md:text-4xl lg:text-5xl mb-6"
-            style={{ color: themeColors.primary }}
+            className="font-display text-3xl md:text-4xl lg:text-5xl leading-tight text-white"
           >
             Why Most People Quit—And How Coaching Changes That
           </h2>
@@ -230,63 +229,63 @@ const AnimatedValley = () => {
 
         {/* The Chicken-Egg Problem */}
         <div
-          className="rounded-2xl p-8 md:p-10 mb-12 bg-white"
+          className="rounded-2xl p-8 mb-12 bg-white"
           style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}
         >
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 mb-8">
+          <div className="flex flex-wrap justify-center items-center gap-3 md:gap-5 mb-6">
             <div className="p-5 rounded-xl text-center bg-gray-50">
-              <div className="text-gray-700 text-sm">
+              <div className="text-gray-700 text-lg leading-relaxed">
                 To <strong style={{ color: themeColors.secondary }}>see the value</strong><br />
                 you need to be good at it
               </div>
             </div>
-            <div className="text-2xl" style={{ color: themeColors.secondary }}>→</div>
+            <div className="text-4xl" style={{ color: themeColors.secondary }}>→</div>
             <div className="p-5 rounded-xl text-center bg-gray-50">
-              <div className="text-gray-700 text-sm">
+              <div className="text-gray-700 text-lg leading-relaxed">
                 To <strong style={{ color: themeColors.secondary }}>get good</strong><br />
                 you need to practice
               </div>
             </div>
-            <div className="text-2xl" style={{ color: themeColors.secondary }}>→</div>
+            <div className="text-4xl" style={{ color: themeColors.secondary }}>→</div>
             <div className="p-5 rounded-xl text-center bg-gray-50">
-              <div className="text-gray-700 text-sm">
+              <div className="text-gray-700 text-lg leading-relaxed">
                 To <strong style={{ color: themeColors.secondary }}>keep practicing</strong><br />
                 you need to see the value
               </div>
             </div>
-            <div className="text-2xl" style={{ color: themeColors.accent }}>↩</div>
           </div>
-          <div className="text-center">
-            <span className="text-lg font-medium" style={{ color: themeColors.primary }}>
+          <div className="w-32 h-1 mb-6 rounded-full mx-auto" style={{ backgroundColor: themeColors.accent }}></div>
+          <div className="text-center px-4">
+            <span className="text-2xl font-semibold leading-tight" style={{ color: themeColors.primary }}>
               You can't see the value until you're already good.
             </span>
-            <span className="text-gray-500 ml-2">So people rationally quit.</span>
+            <span className="text-gray-500 ml-2 text-xl">So people rationally quit.</span>
           </div>
         </div>
 
         {/* Play button */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-12">
           {!isPlaying && (
             <button
               onClick={startAnimation}
-              className="px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-[1.02] flex items-center gap-3"
+              className="px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-[1.02] flex items-center gap-3"
               style={{
                 backgroundColor: themeColors.accent,
                 color: 'white',
                 boxShadow: '0 4px 16px rgba(0,0,0,0.1)'
               }}
             >
-              <span className="text-lg">▶</span>
+              <span className="text-xl">▶</span>
               {hasPlayed ? 'Replay the Journey' : 'Watch the Journey'}
             </button>
           )}
 
           {isPlaying && phase >= 0 && (
             <div
-              className="px-6 py-3 rounded-full bg-white"
+              className="px-8 py-4 rounded-full bg-white"
               style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.08)' }}
             >
-              <div className="text-sm font-medium" style={{ color: themeColors.primary }}>
+              <div className="text-base font-semibold" style={{ color: themeColors.primary }}>
                 {phases[phase].name}
               </div>
             </div>
@@ -729,37 +728,38 @@ const AnimatedValley = () => {
         {/* Bottom insight - shows after animation */}
         {phase >= 10 && !isPlaying && (
           <div
-            className="mt-12 rounded-2xl p-8 md:p-10 valley-fade-in"
-            style={{ backgroundColor: themeColors.primary }}
+            className="mt-12 grid md:grid-cols-2 gap-6 valley-fade-in"
           >
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <div
-                  className="text-xs font-semibold uppercase tracking-widest mb-4"
-                  style={{ color: themeColors.accentSoft }}
-                >
-                  Why Training Doesn't Work
-                </div>
-                <p className="text-white/80 leading-relaxed">
-                  Training is knowledge transfer—one-time, front-loaded. But the problem isn't knowledge.
-                  It's <strong className="text-white">sustained practice through a period where it doesn't feel worth it yet.</strong>
-                </p>
-              </div>
-
+            <div
+              className="p-10 rounded-2xl"
+              style={{ backgroundColor: themeColors.secondary }}
+            >
               <div
-                className="p-6 rounded-xl bg-white"
+                className="text-base font-semibold uppercase tracking-widest mb-6"
+                style={{ color: themeColors.accentLifted }}
               >
-                <div
-                  className="text-xs font-semibold uppercase tracking-widest mb-4"
-                  style={{ color: themeColors.accent }}
-                >
-                  Why Coaching Works
-                </div>
-                <p className="text-gray-600 leading-relaxed">
-                  Coaching keeps you in practice long enough to become someone who sees the value.
-                  <strong style={{ color: themeColors.primary }}> It's the bridge that sustains practice until the value becomes self-evident.</strong>
-                </p>
+                Why Training Doesn't Work
               </div>
+              <p className="text-white leading-relaxed text-xl">
+                Training is knowledge transfer—one-time, front-loaded. But the problem isn't knowledge.
+                It's <strong className="text-white">sustained practice through a period where it doesn't feel worth it yet.</strong>
+              </p>
+            </div>
+
+            <div
+              className="p-10 rounded-2xl bg-white"
+              style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.08)' }}
+            >
+              <div
+                className="text-base font-semibold uppercase tracking-widest mb-6"
+                style={{ color: themeColors.accent }}
+              >
+                Why Coaching Works
+              </div>
+              <p className="leading-relaxed text-xl" style={{ color: themeColors.primary }}>
+                Coaching keeps you in practice long enough to become someone who sees the value.
+                <strong> It's the bridge that sustains practice until the value becomes self-evident.</strong>
+              </p>
             </div>
           </div>
         )}

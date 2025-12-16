@@ -229,9 +229,9 @@ const MVPClubWebsite = () => {
               
               <AnimatedSection delay={200}>
                 <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-xl">
-                  Your team has the tools. They need the mindset. We transform how people 
-                  think and work with AI-building confident, capable Human + AI teams that 
-                  deliver real business results.
+                  Your team is drowning in tools. We coach your team to bring an AI-first mindset
+                  to real work and implement AI workflows. Get measurable productivity gains in 4 weeks
+                  by doing actual work, not sitting through programs.
                 </p>
               </AnimatedSection>
               
@@ -242,7 +242,7 @@ const MVPClubWebsite = () => {
                     className="px-8 py-4 rounded-lg text-white font-semibold transition-all duration-200 hover:scale-105"
                     style={{ backgroundColor: 'var(--color-accent)' }}
                   >
-                    Transform Your Organization
+                    Start a 4-Week Pilot
                   </button>
                   <button
                     onClick={() => scrollToSection('practitioners')}
@@ -261,55 +261,55 @@ const MVPClubWebsite = () => {
 
             {/* Hero Visual */}
             <AnimatedSection delay={400} className="hidden lg:block">
-              <div 
-                className="relative p-8 rounded-2xl"
+              <div
+                className="relative p-10 rounded-2xl"
                 style={{ backgroundColor: 'rgba(17, 94, 89, 0.3)' }}
               >
-                <div className="space-y-4">
+                <div className="space-y-6">
                   {/* Visual representation of Human + AI */}
-                  <div className="flex items-center gap-6">
-                    <div 
-                      className="w-16 h-16 rounded-full flex items-center justify-center"
+                  <div className="flex items-center gap-5">
+                    <div
+                      className="w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0"
                       style={{ backgroundColor: 'var(--color-accent-lifted)' }}
                     >
-                      <Users size={28} style={{ color: 'var(--color-primary)' }} />
+                      <Users size={32} style={{ color: 'var(--color-primary)' }} />
                     </div>
                     <div className="flex-1">
-                      <div className="text-white font-display text-xl mb-1">Human</div>
-                      <div className="text-white/60 text-sm">Strategy • Judgment • Context</div>
+                      <div className="text-white font-display text-2xl mb-1">Human</div>
+                      <div className="text-white/70 text-sm">Strategy • Judgment • Context</div>
                     </div>
                   </div>
-                  
-                  <div className="flex items-center justify-center">
-                    <div className="w-12 h-0.5 bg-white/20" />
-                    <div 
-                      className="px-4 py-1 rounded-full text-sm font-medium mx-4"
+
+                  <div className="flex items-center justify-center py-2">
+                    <div className="flex-1 h-0.5" style={{ backgroundColor: 'var(--color-accent-soft-muted)' }} />
+                    <div
+                      className="w-14 h-14 rounded-full flex items-center justify-center text-2xl font-bold mx-6 flex-shrink-0"
                       style={{ backgroundColor: 'var(--color-accent)', color: 'white' }}
                     >
                       +
                     </div>
-                    <div className="w-12 h-0.5 bg-white/20" />
+                    <div className="flex-1 h-0.5" style={{ backgroundColor: 'var(--color-accent-soft-muted)' }} />
                   </div>
-                  
-                  <div className="flex items-center gap-6">
-                    <div 
-                      className="w-16 h-16 rounded-full flex items-center justify-center"
-                      style={{ backgroundColor: 'var(--color-secondary)' }}
+
+                  <div className="flex items-center gap-5">
+                    <div
+                      className="w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0"
+                      style={{ backgroundColor: 'var(--color-primary)' }}
                     >
-                      <Sparkles size={28} style={{ color: 'var(--color-accent-lifted)' }} />
+                      <Sparkles size={32} style={{ color: 'var(--color-accent-lifted)' }} />
                     </div>
                     <div className="flex-1">
-                      <div className="text-white font-display text-xl mb-1">AI</div>
-                      <div className="text-white/60 text-sm">Speed • Pattern Recognition • Scale</div>
+                      <div className="text-white font-display text-2xl mb-1">AI</div>
+                      <div className="text-white/70 text-sm">Speed • Pattern Recognition • Scale</div>
                     </div>
                   </div>
-                  
-                  <div 
-                    className="mt-6 p-4 rounded-xl text-center"
-                    style={{ backgroundColor: 'rgba(251, 191, 36, 0.15)' }}
+
+                  <div
+                    className="mt-6 p-6 rounded-xl text-center"
+                    style={{ backgroundColor: 'var(--color-secondary)' }}
                   >
-                    <div className="text-white/60 text-xs uppercase tracking-wider mb-1">The Result</div>
-                    <div className="text-white font-display text-lg">Genuine Competitive Advantage</div>
+                    <div className="text-sm font-semibold uppercase tracking-widest mb-2 text-white/70">The Result</div>
+                    <div className="text-white font-display text-xl leading-tight">Genuine Competitive Advantage</div>
                   </div>
                 </div>
               </div>
@@ -319,15 +319,15 @@ const MVPClubWebsite = () => {
       </section>
 
       {/* Problem Section */}
-      <section id="problem" className="py-24" style={{ backgroundColor: '#faf5f0' }}>
+      <section id="problem" className="py-24" style={{ backgroundColor: 'var(--color-background)' }}>
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p 
+              <p
                 className="text-sm font-semibold uppercase tracking-wider mb-4"
                 style={{ color: 'var(--color-secondary)' }}
               >
-                The AI Adoption Crisis
+                The AI Adoption Gap
               </p>
               <h2 className="font-display text-3xl md:text-4xl mb-6" style={{ color: 'var(--color-primary)' }}>
                 You Have the Tools. Where's the Transformation?
@@ -342,30 +342,39 @@ const MVPClubWebsite = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
               {
-                stat: '10%',
-                label: 'of employees use AI for high-value tasks',
-                subtext: 'Despite having enterprise-wide access',
-                color: 'var(--color-accent-soft)'
+                stat: '95%',
+                label: 'of AI projects fail to deliver ROI',
+                subtext: 'Most see zero measurable bottom-line impact',
+                color: 'var(--color-accent-soft)',
+                source: 'MIT Project NANDA, 2025',
+                link: 'https://rcpmag.com/articles/2025/08/25/only-1-in-20-ai-investments-deliver-roi.aspx'
               },
               {
-                stat: '$47B',
-                label: 'spent on AI tools by 2025',
-                subtext: 'Most investments failing to deliver ROI',
-                color: 'var(--color-accent)'
+                stat: '42%',
+                label: 'of companies abandoned AI initiatives',
+                subtext: 'Up from just 17% in 2024—a 147% increase',
+                color: 'var(--color-accent)',
+                source: 'S&P Global Market Intelligence, 2025',
+                link: 'https://www.ciodive.com/news/AI-project-fail-data-SPGlobal/742590/'
               },
               {
-                stat: '73%',
-                label: 'report "AI anxiety" at work',
-                subtext: 'Uncertain how to integrate AI meaningfully',
-                color: 'var(--color-secondary)'
+                stat: '75%',
+                label: 'worry AI will make their job obsolete',
+                subtext: 'Employee anxiety driving hesitation to adopt',
+                color: 'var(--color-secondary)',
+                source: 'EY AI Anxiety Survey, 2024',
+                link: 'https://www.ey.com/en_us/newsroom/2023/12/ey-research-shows-most-us-employees-feel-ai-anxiety'
               }
             ].map((item, i) => (
               <AnimatedSection key={i} delay={i * 100}>
-                <div 
-                  className="card-hover p-8 rounded-2xl text-center"
-                  style={{ backgroundColor: 'white' }}
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block card-hover p-8 rounded-2xl text-center transition-all duration-200"
+                  style={{ backgroundColor: 'white', textDecoration: 'none' }}
                 >
-                  <div 
+                  <div
                     className="font-display text-5xl mb-3"
                     style={{ color: item.color }}
                   >
@@ -374,11 +383,91 @@ const MVPClubWebsite = () => {
                   <div className="font-semibold mb-2" style={{ color: 'var(--color-primary)' }}>
                     {item.label}
                   </div>
-                  <div className="text-sm text-gray-500">{item.subtext}</div>
-                </div>
+                  <div className="text-sm text-gray-500 mb-3">{item.subtext}</div>
+                  <div className="text-xs text-gray-400 italic">Source: {item.source}</div>
+                </a>
               </AnimatedSection>
             ))}
           </div>
+
+          {/* The Real Pressure */}
+          <AnimatedSection>
+            <div className="text-center max-w-3xl mx-auto my-16">
+              <h3 className="font-display text-2xl md:text-3xl mb-6" style={{ color: 'var(--color-primary)' }}>
+                The Real Pressure: Doing More With Less
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6 text-left">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                      style={{ backgroundColor: 'var(--color-accent)' }}
+                    >
+                      <span className="text-white text-xs font-bold">!</span>
+                    </div>
+                    <div>
+                      <div className="font-semibold mb-1" style={{ color: 'var(--color-primary)' }}>
+                        Layoffs mean fewer people doing more work
+                      </div>
+                      <p className="text-gray-600 text-sm">
+                        The question isn't "Should we do AI?" It's "How do we get value THIS MONTH?"
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                      style={{ backgroundColor: 'var(--color-accent)' }}
+                    >
+                      <span className="text-white text-xs font-bold">!</span>
+                    </div>
+                    <div>
+                      <div className="font-semibold mb-1" style={{ color: 'var(--color-primary)' }}>
+                        Constant tool changes create confusion, not capability
+                      </div>
+                      <p className="text-gray-600 text-sm">
+                        Your team doesn't need another tool to learn.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                      style={{ backgroundColor: 'var(--color-accent)' }}
+                    >
+                      <span className="text-white text-xs font-bold">!</span>
+                    </div>
+                    <div>
+                      <div className="font-semibold mb-1" style={{ color: 'var(--color-primary)' }}>
+                        Teams are too busy for "big transformation programs"
+                      </div>
+                      <p className="text-gray-600 text-sm">
+                        They need workflows that work, not workshops that don't.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div
+                      className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                      style={{ backgroundColor: 'var(--color-accent)' }}
+                    >
+                      <span className="text-white text-xs font-bold">!</span>
+                    </div>
+                    <div>
+                      <div className="font-semibold mb-1" style={{ color: 'var(--color-primary)' }}>
+                        You don't need more education
+                      </div>
+                      <p className="text-gray-600 text-sm">
+                        You need AI integrated into existing processes, fast.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
 
           {/* The Real Problem */}
           <AnimatedSection>
@@ -400,8 +489,8 @@ const MVPClubWebsite = () => {
                     {[
                       "One-time training doesn't build lasting skills",
                       "Generic workshops don't address specific workflows",
-                      "Tool access without mindset shift = wasted investment",
-                      "Fear and uncertainty prevent meaningful adoption"
+                      "Big rollouts fail when teams are already overwhelmed",
+                      "You don't need more education—you need workflows that work"
                     ].map((point, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <div 
@@ -482,6 +571,56 @@ const MVPClubWebsite = () => {
             </div>
           </AnimatedSection>
 
+          {/* We Don't Add Complexity */}
+          <AnimatedSection>
+            <div className="max-w-4xl mx-auto mb-16">
+              <div
+                className="rounded-2xl p-8 md:p-12"
+                style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}
+              >
+                <h3 className="font-display text-2xl md:text-3xl text-white mb-8 text-center">
+                  We Don't Add Complexity. We Remove It.
+                </h3>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <div className="text-white/60 text-sm uppercase tracking-wider mb-4">
+                      Your team doesn't need
+                    </div>
+                    <div className="space-y-3">
+                      {[
+                        "Another tool to learn",
+                        "Another training program",
+                        "Another strategic initiative"
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-start gap-3">
+                          <X size={18} style={{ color: 'var(--color-accent-soft)' }} className="flex-shrink-0 mt-0.5" />
+                          <span className="text-white/90">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-white/60 text-sm uppercase tracking-wider mb-4">
+                      What they need
+                    </div>
+                    <div className="space-y-3">
+                      {[
+                        "Guided workflow design tailored to their processes",
+                        "AI integrated into existing work, not bolted on",
+                        "Quick wins that justify the investment"
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-start gap-3">
+                          <CheckCircle2 size={18} style={{ color: 'var(--color-accent-lifted)' }} className="flex-shrink-0 mt-0.5" />
+                          <span className="text-white/90">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {/* Human Strengths */}
             <AnimatedSection delay={100}>
@@ -525,9 +664,9 @@ const MVPClubWebsite = () => {
                 style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div 
+                  <div
                     className="w-14 h-14 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: 'var(--color-secondary)', border: '2px solid #fbbf24' }}
+                    style={{ backgroundColor: 'var(--color-secondary)', border: '2px solid var(--color-accent-lifted)' }}
                   >
                     <Sparkles size={24} style={{ color: 'var(--color-accent-lifted)' }} />
                   </div>
@@ -554,58 +693,38 @@ const MVPClubWebsite = () => {
             </AnimatedSection>
           </div>
 
-          {/* The Collaboration Model */}
-          <AnimatedSection>
-            <div 
-              className="p-8 rounded-2xl text-center"
-              style={{ backgroundColor: 'rgba(251, 191, 36, 0.15)' }}
-            >
-              <h3 className="font-display text-2xl text-white mb-8">The Complementary Collaboration</h3>
-              <div className="grid md:grid-cols-3 gap-8">
-                {[
-                  { human: 'Human Drives Goals', arrow: '→', ai: 'AI Reduces Friction' },
-                  { human: 'AI Generates Insights', arrow: '→', ai: 'Human Connects to Value' },
-                  { human: 'AI Iterates Fast', arrow: '→', ai: 'Human Evaluates & Refines' }
-                ].map((flow, i) => (
-                  <div key={i} className="flex items-center justify-center gap-3">
-                    <span className="text-white/80">{flow.human}</span>
-                    <ArrowRight size={16} style={{ color: 'var(--color-accent-lifted)' }} />
-                    <span className="text-white font-semibold">{flow.ai}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </AnimatedSection>
-
           {/* Key Principles */}
-          <div className="mt-16 grid md:grid-cols-3 gap-6">
+          <div className="mt-12 grid md:grid-cols-3 gap-8">
             {[
-              { 
-                icon: Target, 
+              {
+                icon: Target,
                 title: 'Practice Over Training',
                 desc: 'AI mastery requires continuous practice, not one-time instruction'
               },
-              { 
-                icon: RefreshCw, 
+              {
+                icon: RefreshCw,
                 title: 'Experimentation is Essential',
                 desc: 'Learning happens through trial, error, and iteration'
               },
-              { 
-                icon: Compass, 
+              {
+                icon: Compass,
                 title: 'Context Matters',
                 desc: 'Integration must be tailored to specific roles and workflows'
               }
             ].map((principle, i) => (
               <AnimatedSection key={i} delay={i * 100}>
-                <div className="text-center">
-                  <div 
-                    className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4"
-                    style={{ backgroundColor: 'rgba(251, 191, 36, 0.2)' }}
+                <div
+                  className="p-8 rounded-2xl text-center h-full"
+                  style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}
+                >
+                  <div
+                    className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6"
+                    style={{ backgroundColor: 'var(--color-accent-tint-solid)' }}
                   >
-                    <principle.icon size={24} style={{ color: 'var(--color-accent-lifted)' }} />
+                    <principle.icon size={28} style={{ color: 'var(--color-accent-lifted)' }} />
                   </div>
-                  <h4 className="font-display text-lg text-white mb-2">{principle.title}</h4>
-                  <p className="text-white/70 text-sm">{principle.desc}</p>
+                  <h4 className="font-display text-xl text-white mb-3">{principle.title}</h4>
+                  <p className="text-white/80 text-base leading-relaxed">{principle.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -614,7 +733,7 @@ const MVPClubWebsite = () => {
       </section>
 
       {/* Methodology Section - The Work Loop */}
-      <section id="methodology" className="py-24" style={{ backgroundColor: '#faf5f0' }}>
+      <section id="methodology" className="py-24" style={{ backgroundColor: 'var(--color-background)' }}>
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -628,8 +747,8 @@ const MVPClubWebsite = () => {
                 The Work Loop: Your Operating System for Human + AI Collaboration
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                This isn't a prompt template. It's a way of thinking-a repeatable framework 
-                that transforms how you approach any task with AI.
+                This isn't a prompt template. It's a way of thinking—a repeatable framework
+                that transforms how you approach any task with AI. <strong>We teach it by doing real work together.</strong>
               </p>
             </div>
           </AnimatedSection>
@@ -768,52 +887,47 @@ const MVPClubWebsite = () => {
                 For Organizations
               </p>
             </div>
-            <h2 className="font-display text-3xl md:text-4xl text-white mb-6 max-w-2xl">
-              6-Week Strategic Transformation
+            <h2 className="font-display text-3xl md:text-4xl text-white mb-3 max-w-2xl">
+              4-Week Productivity Sprint
             </h2>
+            <p className="text-xl text-white/90 mb-6 max-w-2xl font-semibold">
+              Start Small. Prove Value. Scale Fast.
+            </p>
             <p className="text-lg text-white/80 mb-12 max-w-2xl leading-relaxed">
-              A comprehensive program that transforms your workforce from "AI access" to 
-              "AI capability"-with measurable outcomes and a clear roadmap.
+              A rapid productivity sprint that installs AI workflows into your team's real processes—without
+              training programs, strategy cycles, or major time commitments. Get measurable productivity
+              gains in 4 weeks by doing actual work, not sitting through programs.
             </p>
           </AnimatedSection>
 
           {/* Timeline */}
-          <div className="grid md:grid-cols-4 gap-6 mb-16">
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
             {[
               {
-                weeks: 'Week 1-2',
-                title: 'Leadership Discovery',
+                weeks: 'Week 1',
+                title: 'Workflow Discovery',
                 activities: [
-                  'C-suite interviews',
-                  'AI initiatives audit',
-                  'Priority mapping'
+                  'Identify 2-3 high-value use cases',
+                  'Map current processes',
+                  'Define success metrics'
                 ]
               },
               {
-                weeks: 'Week 3-4',
-                title: 'Organizational Deep Dive',
+                weeks: 'Week 2-3',
+                title: 'Build + Install',
                 activities: [
-                  'Management interviews',
-                  'Employee surveys',
-                  'Workflow analysis'
+                  'Create tailored AI workflows',
+                  'Install into real team processes',
+                  'Train by doing actual work'
                 ]
               },
               {
-                weeks: 'Week 5',
-                title: 'Strategy Development',
+                weeks: 'Week 4',
+                title: 'Measure + Expand',
                 activities: [
-                  'Opportunity prioritization',
-                  'ROI projections',
-                  'Roadmap creation'
-                ]
-              },
-              {
-                weeks: 'Week 6',
-                title: 'Alignment & Design',
-                activities: [
-                  'Leadership presentation',
-                  'Program design',
-                  'Success metrics'
+                  'Track impact on cycle time, output, workload',
+                  'Identify next workflows to automate',
+                  'Design scale plan (optional)'
                 ]
               }
             ].map((phase, i) => (
@@ -842,34 +956,58 @@ const MVPClubWebsite = () => {
             ))}
           </div>
 
+          {/* What You Get Summary */}
+          <AnimatedSection>
+            <div
+              className="p-8 rounded-xl mb-16 max-w-3xl mx-auto"
+              style={{ backgroundColor: 'var(--color-secondary)' }}
+            >
+              <h3 className="font-display text-2xl text-white mb-6 text-center">What You Get</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  '2-3 production-ready AI workflows',
+                  'Role-specific prompt libraries',
+                  'Loom walkthroughs for each workflow',
+                  'Measurable productivity gains',
+                  'Clear roadmap for broader rollout'
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <CheckCircle2 size={20} style={{ color: 'var(--color-accent-lifted)' }} className="flex-shrink-0 mt-0.5" />
+                    <span className="text-white">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </AnimatedSection>
+
           {/* Deliverables */}
           <AnimatedSection>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="font-display text-xl text-white mb-6">What You'll Receive</h3>
+                <h3 className="font-display text-xl text-white mb-6">What You Walk Away With</h3>
                 <div className="space-y-4">
                   {[
                     {
-                      title: 'Data Report',
-                      desc: 'Comprehensive analysis of employee interviews and qualitative insights'
+                      title: 'Working AI Workflows (Not Just Ideas)',
+                      desc: '2-3 fully functional, team-tested workflows with copy/paste prompts ready for production use'
                     },
                     {
-                      title: 'Prioritization Matrix',
-                      desc: 'Strategic framework mapping business priorities against AI opportunities'
+                      title: 'Role-Based Playbooks',
+                      desc: 'Tailored for your specific roles (PM, Designer, Analyst, etc.) with 3-5 tactical workflows per role'
                     },
                     {
-                      title: 'Transformation Roadmap',
-                      desc: 'Detailed 3-6 month implementation plan with milestones'
+                      title: 'Video Walkthroughs',
+                      desc: 'Loom recordings showing exactly how to use each workflow—no guesswork, no ambiguity'
                     },
                     {
-                      title: 'Program Design',
-                      desc: 'Complete specification for ongoing training and support'
+                      title: 'Impact Metrics',
+                      desc: 'Measure cycle time reduction, track output increases, prove ROI for broader rollout'
                     }
                   ].map((deliverable, i) => (
                     <div 
                       key={i}
                       className="p-4 rounded-lg"
-                      style={{ backgroundColor: 'rgba(251, 191, 36, 0.1)' }}
+                      style={{ backgroundColor: 'var(--color-accent-tint-solid)' }}
                     >
                       <div className="font-semibold text-white mb-1">{deliverable.title}</div>
                       <div className="text-white/60 text-sm">{deliverable.desc}</div>
@@ -885,15 +1023,15 @@ const MVPClubWebsite = () => {
                 <h3 className="font-display text-xl text-white mb-6">Target Outcomes</h3>
                 <div className="space-y-6">
                   {[
-                    { label: 'Increased AI adoption rates', icon: TrendingUp },
-                    { label: 'Measurable productivity gains', icon: Target },
-                    { label: 'Clear ROI on AI investments', icon: Layers },
-                    { label: 'Cultural shift toward AI-first thinking', icon: Brain }
+                    { label: 'Faster project delivery (measured in days saved)', icon: TrendingUp },
+                    { label: 'Reduced employee workload (same output, less time)', icon: Target },
+                    { label: 'Fewer tools, better results (curation over proliferation)', icon: Layers },
+                    { label: 'Clear path to scale (pilot proves the model)', icon: Brain }
                   ].map((outcome, i) => (
                     <div key={i} className="flex items-center gap-4">
                       <div 
                         className="w-10 h-10 rounded-lg flex items-center justify-center"
-                        style={{ backgroundColor: 'rgba(251, 191, 36, 0.2)' }}
+                        style={{ backgroundColor: 'var(--color-accent-tint-solid)' }}
                       >
                         <outcome.icon size={20} style={{ color: 'var(--color-accent-lifted)' }} />
                       </div>
@@ -1009,7 +1147,7 @@ const MVPClubWebsite = () => {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="py-24" style={{ backgroundColor: '#faf5f0' }}>
+      <section id="team" className="py-24" style={{ backgroundColor: 'var(--color-background)' }}>
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -1220,13 +1358,17 @@ const MVPClubWebsite = () => {
                 <h3 className="font-display text-xl mb-3" style={{ color: 'var(--color-primary)' }}>
                   For Organizations
                 </h3>
-                <p className="text-gray-600 mb-6 flex-grow">
-                  Transform your workforce with our 6-week strategic program. 
-                  Book a discovery call to discuss your organization's needs and 
-                  see if we're a good fit.
+                <p className="text-gray-600 mb-6 flex-grow leading-relaxed">
+                  Start small. Prove value fast. Scale what works.
+                  <br /><br />
+                  4-week pilot sprint for one team, one workflow, one problem.
+                  No big rollout. No company-wide program.
+                  Just real work getting done faster with AI.
+                  <br /><br />
+                  <strong>If it works, we scale. If it doesn't, we stop.</strong>
                 </p>
                 <div className="space-y-3 mb-6">
-                  {['30-minute discovery call', 'Custom scope assessment', 'No commitment required'].map((item, i) => (
+                  {['15-minute workflow diagnostic', 'Pilot one team—expand if it works', 'Immediate productivity gains'].map((item, i) => (
                     <div key={i} className="flex items-center gap-2">
                       <CheckCircle2 size={16} style={{ color: 'var(--color-secondary)' }} />
                       <span className="text-sm text-gray-700">{item}</span>
