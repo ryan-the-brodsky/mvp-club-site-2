@@ -4,6 +4,7 @@ import ColorExplorer from './ColorExplorer';
 import { COLOR_PALETTES, generateTheme, applyTheme } from './theme-system';
 import logoImage from './mvp-club-logo.jpeg';
 import AnimatedValley from './AnimatedValley';
+import ElementHelix from './ElementHelix';
 
 // MVP Club Consulting - Complete Single Page Website
 // Brand colors from skill + Section-level content depth + warm approachable voice
@@ -255,60 +256,9 @@ const MVPClubWebsite = () => {
               </AnimatedSection>
             </div>
 
-            {/* Hero Visual */}
+            {/* Hero Visual - Element Helix */}
             <AnimatedSection delay={400} className="hidden lg:block">
-              <div
-                className="relative p-10 rounded-2xl"
-                style={{ backgroundColor: 'rgba(17, 94, 89, 0.3)' }}
-              >
-                <div className="space-y-6">
-                  {/* Visual representation of Human + AI */}
-                  <div className="flex items-center gap-5">
-                    <div
-                      className="w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0"
-                      style={{ backgroundColor: 'var(--color-accent-lifted)' }}
-                    >
-                      <Users size={32} style={{ color: 'var(--color-primary)' }} />
-                    </div>
-                    <div className="flex-1">
-                      <div className="text-white font-display text-2xl mb-1">Human</div>
-                      <div className="text-white/70 text-sm">Strategy • Judgment • Context</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-center py-2">
-                    <div className="flex-1 h-0.5" style={{ backgroundColor: 'var(--color-accent-soft-muted)' }} />
-                    <div
-                      className="w-14 h-14 rounded-full flex items-center justify-center text-2xl font-bold mx-6 flex-shrink-0"
-                      style={{ backgroundColor: 'var(--color-accent)', color: 'white' }}
-                    >
-                      +
-                    </div>
-                    <div className="flex-1 h-0.5" style={{ backgroundColor: 'var(--color-accent-soft-muted)' }} />
-                  </div>
-
-                  <div className="flex items-center gap-5">
-                    <div
-                      className="w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0"
-                      style={{ backgroundColor: 'var(--color-primary)' }}
-                    >
-                      <Sparkles size={32} style={{ color: 'var(--color-accent-lifted)' }} />
-                    </div>
-                    <div className="flex-1">
-                      <div className="text-white font-display text-2xl mb-1">AI</div>
-                      <div className="text-white/70 text-sm">Speed • Pattern Recognition • Scale</div>
-                    </div>
-                  </div>
-
-                  <div
-                    className="mt-6 p-6 rounded-xl text-center"
-                    style={{ backgroundColor: 'var(--color-secondary)' }}
-                  >
-                    <div className="text-sm font-semibold uppercase tracking-widest mb-2 text-white/70">The Result</div>
-                    <div className="text-white font-display text-xl leading-tight">Genuine Competitive Advantage</div>
-                  </div>
-                </div>
-              </div>
+              <ElementHelix />
             </AnimatedSection>
           </div>
         </div>
