@@ -29,6 +29,14 @@ export const COLOR_PALETTES = {
     background: '#faf5f0', // Warm Stone
   },
 
+  midnight: {
+    primary: '#081f3f',    // Darker Navy
+    secondary: '#115e59',  // Deep Teal
+    accent: '#d97706',     // Amber
+    accentSoft: '#f87171', // Coral
+    background: '#faf5f0', // Warm Stone
+  },
+
   // Cool tones
   ocean: {
     primary: '#0c4a6e',    // Deep Ocean Blue

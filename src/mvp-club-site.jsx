@@ -550,8 +550,8 @@ const MVPClubWebsite = () => {
       <AnimatedValley />
 
       {/* Philosophy Section */}
-      <section id="philosophy" className="py-24" style={{ backgroundColor: 'var(--color-secondary)' }}>
-        <div className="max-w-7xl mx-auto px-6">
+      <section id="philosophy" className="py-24" style={{ backgroundColor: 'var(--color-primary)' }}>
+        <div className="max-w-7xl mx-auto px-6" style={{ backgroundColor: 'rgba(17, 94, 89, 0.3)', borderRadius: '1rem', padding: '3rem 1.5rem' }}>
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <p 
@@ -1004,13 +1004,13 @@ const MVPClubWebsite = () => {
                       desc: 'Measure cycle time reduction, track output increases, prove ROI for broader rollout'
                     }
                   ].map((deliverable, i) => (
-                    <div 
+                    <div
                       key={i}
                       className="p-4 rounded-lg"
-                      style={{ backgroundColor: 'var(--color-accent-tint-solid)' }}
+                      style={{ backgroundColor: 'var(--color-accent)' }}
                     >
                       <div className="font-semibold text-white mb-1">{deliverable.title}</div>
-                      <div className="text-white/60 text-sm">{deliverable.desc}</div>
+                      <div className="text-white/80 text-sm">{deliverable.desc}</div>
                     </div>
                   ))}
                 </div>
