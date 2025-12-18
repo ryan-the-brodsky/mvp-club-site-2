@@ -5,6 +5,7 @@ import { COLOR_PALETTES, generateTheme, applyTheme } from './theme-system';
 import logoImage from './mvp-club-logo.jpeg';
 import AnimatedValley from './AnimatedValley';
 import ElementHelix from './ElementHelix';
+import WorkLoop from './WorkLoop';
 
 // MVP Club Consulting - Complete Single Page Website
 // Brand colors from skill + Section-level content depth + warm approachable voice
@@ -629,145 +630,8 @@ const MVPClubWebsite = () => {
       </section>
 
       {/* Methodology Section - The Work Loop */}
-      <section id="methodology" className="py-24" style={{ backgroundColor: 'var(--color-background)' }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <AnimatedSection>
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <p
-                className="text-lg font-semibold uppercase tracking-wider mb-4"
-                style={{ color: 'var(--color-secondary)' }}
-              >
-                Our Methodology
-              </p>
-              <h2 className="font-display text-3xl md:text-4xl mb-6" style={{ color: 'var(--color-primary)' }}>
-                The Work Loop: Your Operating System for Human + AI Collaboration
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                This isn't a prompt template. It's a way of thinking—a repeatable framework
-                that transforms how you approach any task with AI. <strong>We teach it by doing real work together.</strong>
-              </p>
-            </div>
-          </AnimatedSection>
-
-          {/* Work Loop Visual */}
-          <AnimatedSection>
-            <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-                {[
-                  { 
-                    num: '01', 
-                    title: 'Articulate', 
-                    desc: 'Define what you actually need-the real outcome, not just the surface request',
-                    color: 'var(--color-primary)'
-                  },
-                  { 
-                    num: '02', 
-                    title: 'Build', 
-                    desc: 'Gather context, examples, and constraints that will shape the output',
-                    color: 'var(--color-secondary)'
-                  },
-                  { 
-                    num: '03', 
-                    title: 'Prompt', 
-                    desc: 'Craft your request with clarity, specificity, and the right level of structure',
-                    color: 'var(--color-accent)'
-                  },
-                  { 
-                    num: '04', 
-                    title: 'Execute', 
-                    desc: 'Run the prompt and generate initial outputs',
-                    color: 'var(--color-secondary-lifted)'
-                  },
-                  {
-                    num: '05',
-                    title: 'Evaluate',
-                    desc: "Apply your judgment-what works? What doesn't? What's missing?",
-                    color: 'var(--color-primary-lifted)'
-                  },
-                  { 
-                    num: '06', 
-                    title: 'Iterate', 
-                    desc: 'Refine based on evaluation. Loop back as needed until you hit the target.',
-                    color: 'var(--color-accent-soft)'
-                  }
-                ].map((step, i) => (
-                  <AnimatedSection key={i} delay={i * 100}>
-                    <div 
-                      className="card-hover p-6 rounded-xl bg-white h-full"
-                      style={{ borderTop: `4px solid ${step.color}` }}
-                    >
-                      <div 
-                        className="font-display text-3xl mb-2"
-                        style={{ color: step.color }}
-                      >
-                        {step.num}
-                      </div>
-                      <h4 
-                        className="font-display text-lg mb-2"
-                        style={{ color: 'var(--color-primary)' }}
-                      >
-                        {step.title}
-                      </h4>
-                      <p className="text-sm text-gray-600">{step.desc}</p>
-                    </div>
-                  </AnimatedSection>
-                ))}
-              </div>
-
-              {/* Loop indicator */}
-              <div className="mt-8 flex justify-center">
-                <div
-                  className="inline-flex items-center gap-3 px-6 py-3 rounded-full"
-                  style={{ backgroundColor: 'var(--color-accent)' }}
-                >
-                  <RefreshCw size={18} style={{ color: 'white' }} />
-                  <span className="font-medium text-white">
-                    Continuous improvement through iteration
-                  </span>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
-
-          {/* Why This Works */}
-          <AnimatedSection>
-            <div className="mt-16 grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="font-display text-2xl mb-4" style={{ color: 'var(--color-primary)' }}>
-                  Why Most People Skip Steps 1-2
-                </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  The hidden leverage in AI work isn't the prompt-it's the preparation. 
-                  Most people jump straight to "Prompt" and wonder why results feel mediocre.
-                </p>
-                <p className="text-gray-600 leading-relaxed">
-                  The Articulate and Build steps force you to externalize tacit knowledge. 
-                  You know more than you think-but AI can't read your mind. The Work Loop 
-                  helps you surface that knowledge and put it to work.
-                </p>
-              </div>
-              <div
-                className="p-6 rounded-xl"
-                style={{ backgroundColor: 'white' }}
-              >
-                <div className="font-display text-lg mb-4" style={{ color: 'var(--color-primary)' }}>
-                  The "Good Enough" Mindset
-                </div>
-                <p className="text-gray-600 text-sm mb-4">
-                  Perfectionism kills AI adoption. The Work Loop embraces iteration-start 
-                  rough, refine fast. Your first output isn't meant to be final. It's meant 
-                  to give you something to evaluate and improve.
-                </p>
-                <div 
-                  className="px-4 py-2 rounded-lg inline-block text-sm font-medium"
-                  style={{ backgroundColor: 'var(--color-secondary)', color: 'var(--color-accent-lifted)' }}
-                >
-                  "Done is better than perfect-iteration makes it better than done."
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
+      <section id="methodology" style={{ backgroundColor: '#faf5f0' }}>
+        <WorkLoop />
       </section>
 
       {/* For Organizations Section */}
