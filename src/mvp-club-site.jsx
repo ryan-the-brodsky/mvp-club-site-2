@@ -20,10 +20,7 @@ const MVPClubWebsite = () => {
   // Navigation sections
   const sections = [
     { id: 'hero', label: 'Home' },
-    { id: 'problem', label: 'The Problem' },
-    { id: 'journey', label: 'The Journey' },
-    { id: 'philosophy', label: 'Our Philosophy' },
-    { id: 'methodology', label: 'The Work Loop' },
+    { id: 'problem', label: 'What We Do' },
     { id: 'organizations', label: 'For Organizations' },
     { id: 'practitioners', label: 'For Practitioners' },
     { id: 'team', label: 'About Us' },
@@ -229,9 +226,8 @@ const MVPClubWebsite = () => {
               
               <AnimatedSection delay={200}>
                 <p className="text-lg text-white/80 mb-8 leading-relaxed max-w-xl">
-                  Your team is drowning in tools. We coach your team to bring an AI-first mindset
-                  to real work and implement AI workflows. Get measurable productivity gains in 4 weeks
-                  by doing actual work, not sitting through programs.
+                  We coach your team to bring an AI-first mindset to real work and implement AI workflows.
+                  Get measurable productivity gains in 4 weeks by doing actual work, not sitting through programs.
                 </p>
               </AnimatedSection>
               
@@ -347,7 +343,7 @@ const MVPClubWebsite = () => {
                 subtext: 'Most see zero measurable bottom-line impact',
                 color: 'var(--color-accent-soft)',
                 source: 'MIT Project NANDA, 2025',
-                link: 'https://rcpmag.com/articles/2025/08/25/only-1-in-20-ai-investments-deliver-roi.aspx'
+                link: 'https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf'
               },
               {
                 stat: '42%',
@@ -355,15 +351,15 @@ const MVPClubWebsite = () => {
                 subtext: 'Up from just 17% in 2024—a 147% increase',
                 color: 'var(--color-accent)',
                 source: 'S&P Global Market Intelligence, 2025',
-                link: 'https://www.ciodive.com/news/AI-project-fail-data-SPGlobal/742590/'
+                link: 'https://www.spglobal.com/market-intelligence/en/news-insights/research/ai-experiences-rapid-adoption-but-with-mixed-outcomes-highlights-from-vote-ai-machine-learning'
               },
               {
-                stat: '75%',
-                label: 'worry AI will make their job obsolete',
+                stat: '89%',
+                label: 'of workers worry about AI impact on job security',
                 subtext: 'Employee anxiety driving hesitation to adopt',
                 color: 'var(--color-secondary)',
-                source: 'EY AI Anxiety Survey, 2024',
-                link: 'https://www.ey.com/en_us/newsroom/2023/12/ey-research-shows-most-us-employees-feel-ai-anxiety'
+                source: 'Resume Now AI Disruption Report, 2025',
+                link: 'https://www.resume-now.com/job-resources/careers/ai-disruption-report'
               }
             ].map((item, i) => (
               <AnimatedSection key={i} delay={i * 100}>
@@ -407,7 +403,7 @@ const MVPClubWebsite = () => {
                     </div>
                     <div>
                       <div className="font-semibold mb-1" style={{ color: 'var(--color-primary)' }}>
-                        Layoffs mean fewer people doing more work
+                        Teams Need to See Success: Fast
                       </div>
                       <p className="text-gray-600 text-sm">
                         The question isn't "Should we do AI?" It's "How do we get value THIS MONTH?"
@@ -423,10 +419,10 @@ const MVPClubWebsite = () => {
                     </div>
                     <div>
                       <div className="font-semibold mb-1" style={{ color: 'var(--color-primary)' }}>
-                        Constant tool changes create confusion, not capability
+                        Pilot first, scale what works
                       </div>
                       <p className="text-gray-600 text-sm">
-                        Your team doesn't need another tool to learn.
+                        Start with one team, prove value, then expand—no big rollouts.
                       </p>
                     </div>
                   </div>
@@ -457,10 +453,10 @@ const MVPClubWebsite = () => {
                     </div>
                     <div>
                       <div className="font-semibold mb-1" style={{ color: 'var(--color-primary)' }}>
-                        You don't need more education
+                        AI adoption isn't about knowledge, it's about practice
                       </div>
                       <p className="text-gray-600 text-sm">
-                        You need AI integrated into existing processes, fast.
+                        Success comes from coaching through setbacks.
                       </p>
                     </div>
                   </div>
@@ -550,8 +546,8 @@ const MVPClubWebsite = () => {
       <AnimatedValley />
 
       {/* Philosophy Section */}
-      <section id="philosophy" className="py-24" style={{ backgroundColor: 'var(--color-primary)' }}>
-        <div className="max-w-7xl mx-auto px-6" style={{ backgroundColor: 'rgba(17, 94, 89, 0.3)', borderRadius: '1rem', padding: '3rem 1.5rem' }}>
+      <section id="philosophy" className="py-24" style={{ backgroundColor: 'var(--color-background)' }}>
+        <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <p 
@@ -560,10 +556,10 @@ const MVPClubWebsite = () => {
               >
                 Our Philosophy
               </p>
-              <h2 className="font-display text-3xl md:text-4xl text-white mb-6">
+              <h2 className="font-display text-3xl md:text-4xl mb-6" style={{ color: 'var(--color-primary)' }}>
                 The New Unit of Labor: Human + AI Teams
               </h2>
-              <p className="text-lg text-white/80 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 We believe the fundamental unit of work is shifting. Not from human to AI. 
                 But from individual employee to the Employee + AI Team. An inseparable 
                 collaboration where each brings irreplaceable strengths.
@@ -575,32 +571,32 @@ const MVPClubWebsite = () => {
           <AnimatedSection>
             <div className="max-w-4xl mx-auto mb-16">
               <div
-                className="rounded-2xl p-8 md:p-12"
-                style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}
+                className="rounded-2xl p-8 md:p-12 bg-white"
+                style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}
               >
-                <h3 className="font-display text-2xl md:text-3xl text-white mb-8 text-center">
+                <h3 className="font-display text-2xl md:text-3xl mb-8 text-center" style={{ color: 'var(--color-primary)' }}>
                   We Don't Add Complexity. We Remove It.
                 </h3>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <div className="text-white/60 text-sm uppercase tracking-wider mb-4">
+                    <div className="text-gray-500 text-sm uppercase tracking-wider mb-4">
                       Your team doesn't need
                     </div>
                     <div className="space-y-3">
                       {[
-                        "Another tool to learn",
+                        "Knowledge without practice",
                         "Another training program",
                         "Another strategic initiative"
                       ].map((item, i) => (
                         <div key={i} className="flex items-start gap-3">
                           <X size={18} style={{ color: 'var(--color-accent-soft)' }} className="flex-shrink-0 mt-0.5" />
-                          <span className="text-white/90">{item}</span>
+                          <span className="text-gray-700">{item}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <div className="text-white/60 text-sm uppercase tracking-wider mb-4">
+                    <div className="text-gray-500 text-sm uppercase tracking-wider mb-4">
                       What they need
                     </div>
                     <div className="space-y-3">
@@ -610,8 +606,8 @@ const MVPClubWebsite = () => {
                         "Quick wins that justify the investment"
                       ].map((item, i) => (
                         <div key={i} className="flex items-start gap-3">
-                          <CheckCircle2 size={18} style={{ color: 'var(--color-accent-lifted)' }} className="flex-shrink-0 mt-0.5" />
-                          <span className="text-white/90">{item}</span>
+                          <CheckCircle2 size={18} style={{ color: 'var(--color-secondary)' }} className="flex-shrink-0 mt-0.5" />
+                          <span className="text-gray-700">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -624,20 +620,20 @@ const MVPClubWebsite = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {/* Human Strengths */}
             <AnimatedSection delay={100}>
-              <div 
-                className="p-8 rounded-2xl h-full"
-                style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}
+              <div
+                className="p-8 rounded-2xl h-full bg-white"
+                style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div 
+                  <div
                     className="w-14 h-14 rounded-xl flex items-center justify-center"
                     style={{ backgroundColor: 'var(--color-accent-lifted)' }}
                   >
                     <Users size={24} style={{ color: 'var(--color-primary)' }} />
                   </div>
                   <div>
-                    <h3 className="font-display text-xl text-white">Human Strengths</h3>
-                    <p className="text-white/60 text-sm">What you bring to the team</p>
+                    <h3 className="font-display text-xl" style={{ color: 'var(--color-primary)' }}>Human Strengths</h3>
+                    <p className="text-gray-500 text-sm">What you bring to the team</p>
                   </div>
                 </div>
                 <div className="space-y-3">
@@ -649,8 +645,8 @@ const MVPClubWebsite = () => {
                     'Final evaluation and refinement'
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <CheckCircle2 size={18} style={{ color: 'var(--color-accent-lifted)' }} className="flex-shrink-0 mt-0.5" />
-                      <span className="text-white/90">{item}</span>
+                      <CheckCircle2 size={18} style={{ color: 'var(--color-accent)' }} className="flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -659,20 +655,20 @@ const MVPClubWebsite = () => {
 
             {/* AI Strengths */}
             <AnimatedSection delay={200}>
-              <div 
-                className="p-8 rounded-2xl h-full"
-                style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}
+              <div
+                className="p-8 rounded-2xl h-full bg-white"
+                style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div
                     className="w-14 h-14 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: 'var(--color-secondary)', border: '2px solid var(--color-accent-lifted)' }}
+                    style={{ backgroundColor: 'var(--color-secondary)' }}
                   >
-                    <Sparkles size={24} style={{ color: 'var(--color-accent-lifted)' }} />
+                    <Sparkles size={24} style={{ color: 'white' }} />
                   </div>
                   <div>
-                    <h3 className="font-display text-xl text-white">AI Strengths</h3>
-                    <p className="text-white/60 text-sm">What AI brings to the team</p>
+                    <h3 className="font-display text-xl" style={{ color: 'var(--color-primary)' }}>AI Strengths</h3>
+                    <p className="text-gray-500 text-sm">What AI brings to the team</p>
                   </div>
                 </div>
                 <div className="space-y-3">
@@ -684,8 +680,8 @@ const MVPClubWebsite = () => {
                     'Tireless iteration and variation'
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <Zap size={18} style={{ color: 'var(--color-accent-lifted)' }} className="flex-shrink-0 mt-0.5" />
-                      <span className="text-white/90">{item}</span>
+                      <Zap size={18} style={{ color: 'var(--color-secondary)' }} className="flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -714,8 +710,8 @@ const MVPClubWebsite = () => {
             ].map((principle, i) => (
               <AnimatedSection key={i} delay={i * 100}>
                 <div
-                  className="p-8 rounded-2xl text-center h-full"
-                  style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}
+                  className="p-8 rounded-2xl text-center h-full bg-white"
+                  style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}
                 >
                   <div
                     className="w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6"
@@ -723,8 +719,8 @@ const MVPClubWebsite = () => {
                   >
                     <principle.icon size={28} style={{ color: 'white' }} />
                   </div>
-                  <h4 className="font-display text-xl text-white mb-3">{principle.title}</h4>
-                  <p className="text-white/80 text-base leading-relaxed">{principle.desc}</p>
+                  <h4 className="font-display text-xl mb-3" style={{ color: 'var(--color-primary)' }}>{principle.title}</h4>
+                  <p className="text-gray-600 text-base leading-relaxed">{principle.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -932,11 +928,11 @@ const MVPClubWebsite = () => {
               }
             ].map((phase, i) => (
               <AnimatedSection key={i} delay={i * 100}>
-                <div 
+                <div
                   className="p-6 rounded-xl h-full"
                   style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}
                 >
-                  <div 
+                  <div
                     className="text-xs font-semibold uppercase tracking-wider mb-2"
                     style={{ color: 'var(--color-accent-lifted)' }}
                   >
@@ -946,7 +942,7 @@ const MVPClubWebsite = () => {
                   <div className="space-y-2">
                     {phase.activities.map((activity, j) => (
                       <div key={j} className="flex items-start gap-2">
-                        <CheckCircle2 size={14} style={{ color: 'var(--color-secondary-lifted)' }} className="flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 size={14} style={{ color: 'var(--color-accent-lifted)' }} className="flex-shrink-0 mt-0.5" />
                         <span className="text-white/70 text-sm">{activity}</span>
                       </div>
                     ))}
@@ -959,10 +955,10 @@ const MVPClubWebsite = () => {
           {/* What You Get Summary */}
           <AnimatedSection>
             <div
-              className="p-8 rounded-xl mb-16 max-w-3xl mx-auto"
-              style={{ backgroundColor: 'var(--color-secondary)' }}
+              className="p-8 rounded-xl mb-16 max-w-3xl mx-auto bg-white"
+              style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.06)', border: '2px solid var(--color-secondary)' }}
             >
-              <h3 className="font-display text-2xl text-white mb-6 text-center">What You Get</h3>
+              <h3 className="font-display text-2xl mb-6 text-center" style={{ color: 'var(--color-primary)' }}>What You Get</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {[
                   '2-3 production-ready AI workflows',
@@ -972,8 +968,8 @@ const MVPClubWebsite = () => {
                   'Clear roadmap for broader rollout'
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 size={20} style={{ color: 'var(--color-accent-lifted)' }} className="flex-shrink-0 mt-0.5" />
-                    <span className="text-white">{item}</span>
+                    <CheckCircle2 size={20} style={{ color: 'var(--color-secondary)' }} className="flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">{item}</span>
                   </div>
                 ))}
               </div>
@@ -1016,16 +1012,16 @@ const MVPClubWebsite = () => {
                 </div>
               </div>
 
-              <div 
-                className="p-8 rounded-xl"
-                style={{ backgroundColor: 'var(--color-secondary)' }}
+              <div
+                className="p-8 rounded-xl bg-white"
+                style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.06)', border: '2px solid var(--color-accent)' }}
               >
-                <h3 className="font-display text-xl text-white mb-6">Target Outcomes</h3>
+                <h3 className="font-display text-xl mb-6" style={{ color: 'var(--color-primary)' }}>Target Outcomes</h3>
                 <div className="space-y-6">
                   {[
                     { label: 'Faster project delivery (measured in days saved)', icon: TrendingUp },
                     { label: 'Reduced employee workload (same output, less time)', icon: Target },
-                    { label: 'Fewer tools, better results (curation over proliferation)', icon: Layers },
+                    { label: 'Sustainable AI capability (practice builds lasting skills)', icon: Layers },
                     { label: 'Clear path to scale (pilot proves the model)', icon: Brain }
                   ].map((outcome, i) => (
                     <div key={i} className="flex items-center gap-4">
@@ -1035,7 +1031,7 @@ const MVPClubWebsite = () => {
                       >
                         <outcome.icon size={20} style={{ color: 'white' }} />
                       </div>
-                      <span className="text-white">{outcome.label}</span>
+                      <span className="text-gray-700">{outcome.label}</span>
                     </div>
                   ))}
                 </div>
@@ -1147,20 +1143,20 @@ const MVPClubWebsite = () => {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="py-24" style={{ backgroundColor: 'var(--color-background)' }}>
+      <section id="team" className="py-24" style={{ backgroundColor: 'var(--color-primary)' }}>
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p 
+              <p
                 className="text-sm font-semibold uppercase tracking-wider mb-4"
-                style={{ color: 'var(--color-secondary)' }}
+                style={{ color: 'var(--color-accent-lifted)' }}
               >
                 About Us
               </p>
-              <h2 className="font-display text-3xl md:text-4xl mb-6" style={{ color: 'var(--color-primary)' }}>
+              <h2 className="font-display text-3xl md:text-4xl text-white mb-6">
                 Meet the Team
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-white/80 leading-relaxed">
                 We're practitioners first-people who've navigated the AI transformation 
                 ourselves and are passionate about helping others do the same.
               </p>
@@ -1331,14 +1327,14 @@ const MVPClubWebsite = () => {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-24" style={{ backgroundColor: 'var(--color-primary)' }}>
-        <div className="max-w-7xl mx-auto px-6" style={{ backgroundColor: 'rgba(17, 94, 89, 0.3)', borderRadius: '1rem', padding: '3rem 1.5rem' }}>
+      <section id="contact" className="py-24" style={{ backgroundColor: 'var(--color-background)' }}>
+        <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="font-display text-3xl md:text-4xl text-white mb-6">
+              <h2 className="font-display text-3xl md:text-4xl mb-6" style={{ color: 'var(--color-primary)' }}>
                 Ready to Transform How You Work with AI?
               </h2>
-              <p className="text-lg text-white/80 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 Whether you're transforming an organization or developing your own skills, 
                 we have a path for you. Choose what fits your situation.
               </p>

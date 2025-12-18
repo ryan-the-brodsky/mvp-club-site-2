@@ -20,7 +20,7 @@ export function deriveColorVariants(baseColor) {
  * Predefined color schemes based on brand guidelines
  */
 export const COLOR_PALETTES = {
-  // Original MVP Club brand colors
+  // Navy + Teal (Original brand)
   default: {
     primary: '#1a365d',    // Deep Navy
     secondary: '#115e59',  // Deep Teal
@@ -37,7 +37,7 @@ export const COLOR_PALETTES = {
     background: '#faf5f0', // Warm Stone
   },
 
-  // Cool tones
+  // Blue + Teal
   ocean: {
     primary: '#0c4a6e',    // Deep Ocean Blue
     secondary: '#0e7490',  // Cyan
@@ -54,14 +54,6 @@ export const COLOR_PALETTES = {
     background: '#f0f9ff', // Cool background
   },
 
-  arctic: {
-    primary: '#0f766e',    // Dark Teal
-    secondary: '#155e75',  // Dark Cyan
-    accent: '#06b6d4',     // Bright Cyan
-    accentSoft: '#22d3ee', // Light Cyan
-    background: '#ecfeff', // Cyan background
-  },
-
   sapphire: {
     primary: '#1e3a8a',    // Deep Blue
     secondary: '#1e40af',  // Blue
@@ -70,40 +62,43 @@ export const COLOR_PALETTES = {
     background: '#eff6ff', // Blue background
   },
 
-  // Warm tones
-  sunset: {
-    primary: '#7c2d12',    // Deep Brown
-    secondary: '#9a3412',  // Orange Brown
-    accent: '#eab308',     // Yellow
-    accentSoft: '#f97316', // Orange
-    background: '#fffbeb', // Warm Yellow background
-  },
-
-  desert: {
-    primary: '#78350f',    // Deep Brown
-    secondary: '#92400e',  // Brown
-    accent: '#f59e0b',     // Amber
-    accentSoft: '#fbbf24', // Golden
-    background: '#fef3c7', // Warm background
-  },
-
-  ember: {
-    primary: '#991b1b',    // Deep Red
-    secondary: '#b45309',  // Orange Brown
-    accent: '#f59e0b',     // Amber
+  // Teal + Orange (User favorite)
+  teal: {
+    primary: '#134e4a',    // Deep Teal
+    secondary: '#115e59',  // Teal
+    accent: '#f97316',     // Orange
     accentSoft: '#fb923c', // Light Orange
-    background: '#fff7ed', // Warm background
+    background: '#f0fdfa', // Teal background
   },
 
-  terracotta: {
-    primary: '#9a3412',    // Terracotta
-    secondary: '#be123c',  // Rose
+  // Rose + Gold (User favorite)
+  rose: {
+    primary: '#881337',    // Deep Rose
+    secondary: '#9f1239',  // Rose
+    accent: '#fbbf24',     // Golden
+    accentSoft: '#fcd34d', // Light Gold
+    background: '#fff1f2', // Rose background
+  },
+
+  // Red + Yellow
+  crimson: {
+    primary: '#7f1d1d',    // Dark Red
+    secondary: '#991b1b',  // Red
     accent: '#eab308',     // Yellow
     accentSoft: '#fbbf24', // Golden
-    background: '#fef2f2', // Light Rose background
+    background: '#fef2f2', // Light Red background
   },
 
-  // Green tones
+  // Purple + Amber
+  indigo: {
+    primary: '#3730a3',    // Indigo
+    secondary: '#4338ca',  // Light Indigo
+    accent: '#f59e0b',     // Amber
+    accentSoft: '#fbbf24', // Golden
+    background: '#eef2ff', // Indigo background
+  },
+
+  // Green + Orange
   forest: {
     primary: '#14532d',    // Forest Green
     secondary: '#166534',  // Green
@@ -120,90 +115,6 @@ export const COLOR_PALETTES = {
     background: '#f0fdf4', // Light Green background
   },
 
-  mint: {
-    primary: '#047857',    // Emerald
-    secondary: '#059669',  // Light Emerald
-    accent: '#06b6d4',     // Cyan
-    accentSoft: '#22d3ee', // Light Cyan
-    background: '#ecfdf5', // Mint background
-  },
-
-  olive: {
-    primary: '#4d7c0f',    // Olive
-    secondary: '#65a30d',  // Lime
-    accent: '#eab308',     // Yellow
-    accentSoft: '#fbbf24', // Golden
-    background: '#fef9c3', // Yellow background
-  },
-
-  // Earthy tones
-  copper: {
-    primary: '#92400e',    // Deep Copper
-    secondary: '#b45309',  // Bronze
-    accent: '#eab308',     // Yellow
-    accentSoft: '#fbbf24', // Golden
-    background: '#fef3c7', // Warm background
-  },
-
-  clay: {
-    primary: '#78350f',    // Clay Brown
-    secondary: '#a16207',  // Warm Brown
-    accent: '#f59e0b',     // Amber
-    accentSoft: '#fb923c', // Light Orange
-    background: '#fef9c3', // Warm yellow background
-  },
-
-  // Neutral + warm accents
-  slate: {
-    primary: '#1e293b',    // Dark Slate
-    secondary: '#334155',  // Slate
-    accent: '#0ea5e9',     // Sky Blue
-    accentSoft: '#38bdf8', // Light Sky
-    background: '#f8fafc', // Light background
-  },
-
-  cedar: {
-    primary: '#713f12',    // Cedar Brown
-    secondary: '#854d0e',  // Warm Brown
-    accent: '#f59e0b',     // Amber
-    accentSoft: '#fbbf24', // Golden
-    background: '#fef3c7', // Warm background
-  },
-
-  // Unique combinations
-  rose: {
-    primary: '#881337',    // Deep Rose
-    secondary: '#9f1239',  // Rose
-    accent: '#fbbf24',     // Golden
-    accentSoft: '#fcd34d', // Light Gold
-    background: '#fff1f2', // Rose background
-  },
-
-  teal: {
-    primary: '#134e4a',    // Deep Teal
-    secondary: '#115e59',  // Teal
-    accent: '#f97316',     // Orange
-    accentSoft: '#fb923c', // Light Orange
-    background: '#f0fdfa', // Teal background
-  },
-
-  indigo: {
-    primary: '#3730a3',    // Indigo
-    secondary: '#4338ca',  // Light Indigo
-    accent: '#f59e0b',     // Amber
-    accentSoft: '#fbbf24', // Golden
-    background: '#eef2ff', // Indigo background
-  },
-
-  crimson: {
-    primary: '#7f1d1d',    // Dark Red
-    secondary: '#991b1b',  // Red
-    accent: '#eab308',     // Yellow
-    accentSoft: '#fbbf24', // Golden
-    background: '#fef2f2', // Light Red background
-  },
-
-  // Growth-focused
   moss: {
     primary: '#365314',    // Deep Moss
     secondary: '#3f6212',  // Green
@@ -220,21 +131,103 @@ export const COLOR_PALETTES = {
     background: '#ecfdf5', // Mint background
   },
 
-  // Premium warm
-  mahogany: {
-    primary: '#7c2d12',    // Mahogany
-    secondary: '#92400e',  // Warm Brown
-    accent: '#fbbf24',     // Golden
-    accentSoft: '#fcd34d', // Light Gold
-    background: '#fff7ed', // Warm background
+  // Emerald + Cyan
+  mint: {
+    primary: '#047857',    // Emerald
+    secondary: '#059669',  // Light Emerald
+    accent: '#06b6d4',     // Cyan
+    accentSoft: '#22d3ee', // Light Cyan
+    background: '#ecfdf5', // Mint background
   },
 
-  bronze: {
-    primary: '#78350f',    // Bronze
-    secondary: '#a16207',  // Brass
+  // Slate + Sky Blue
+  slate: {
+    primary: '#1e293b',    // Dark Slate
+    secondary: '#334155',  // Slate
     accent: '#0ea5e9',     // Sky Blue
     accentSoft: '#38bdf8', // Light Sky
-    background: '#fefce8', // Warm background
+    background: '#f8fafc', // Light background
+  },
+
+  // Navy + Coral
+  nautical: {
+    primary: '#0f172a',    // Deep Navy
+    secondary: '#1e3a8a',  // Navy Blue
+    accent: '#f97316',     // Coral Orange
+    accentSoft: '#fb923c', // Light Coral
+    background: '#f0f9ff', // Light Blue background
+  },
+
+  // Cobalt + Amber
+  cobalt: {
+    primary: '#1e40af',    // Cobalt Blue
+    secondary: '#2563eb',  // Blue
+    accent: '#f59e0b',     // Amber
+    accentSoft: '#fbbf24', // Golden
+    background: '#eff6ff', // Blue background
+  },
+
+  // Azure + Rose
+  azure: {
+    primary: '#0369a1',    // Azure Blue
+    secondary: '#0284c7',  // Sky Blue
+    accent: '#fb7185',     // Rose
+    accentSoft: '#fda4af', // Light Rose
+    background: '#f0f9ff', // Sky background
+  },
+
+  // Charcoal + Teal
+  charcoal: {
+    primary: '#1f2937',    // Charcoal
+    secondary: '#374151',  // Gray
+    accent: '#14b8a6',     // Teal
+    accentSoft: '#2dd4bf', // Light Teal
+    background: '#f9fafb', // Light Gray background
+  },
+
+  // Graphite + Amber
+  graphite: {
+    primary: '#18181b',    // Graphite
+    secondary: '#27272a',  // Zinc
+    accent: '#f59e0b',     // Amber
+    accentSoft: '#fbbf24', // Golden
+    background: '#fafafa', // Warm White background
+  },
+
+  // Deep Blue + Coral
+  marine: {
+    primary: '#0c4a6e',    // Marine Blue
+    secondary: '#075985',  // Deep Sky
+    accent: '#f87171',     // Coral
+    accentSoft: '#fca5a5', // Light Coral
+    background: '#f0f9ff', // Sky background
+  },
+
+  // Violet + Gold
+  violet: {
+    primary: '#5b21b6',    // Violet
+    secondary: '#6b21a8',  // Purple
+    accent: '#fbbf24',     // Golden
+    accentSoft: '#fcd34d', // Light Gold
+    background: '#faf5ff', // Violet background
+  },
+
+  // Plum + Amber
+  plum: {
+    primary: '#701a75',    // Plum
+    secondary: '#86198f',  // Fuchsia
+    accent: '#f59e0b',     // Amber
+    accentSoft: '#fbbf24', // Golden
+    background: '#fdf4ff', // Light Purple background
+  },
+
+  // Midnight Blue + Cyan
+  midnight_blue: {
+    primary: '#172554',    // Midnight Blue
+    secondary: '#1e3a8a',  // Blue
+    accent: '#06b6d4',     // Cyan
+    accentSoft: '#22d3ee', // Light Cyan
+    background: '#eff6ff', // Blue background
   },
 };
 

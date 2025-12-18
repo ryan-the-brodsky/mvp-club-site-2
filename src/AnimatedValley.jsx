@@ -133,7 +133,7 @@ const AnimatedValley = () => {
     <section
       id="journey"
       ref={sectionRef}
-      className="pt-16 pb-24"
+      className="py-16"
       style={{ backgroundColor: sectionBg }}
     >
       <style>{`
@@ -213,10 +213,10 @@ const AnimatedValley = () => {
         }`}
       >
         {/* Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <p
-            className="text-2xl md:text-3xl font-bold uppercase tracking-wide mb-6"
-            style={{ color: themeColors.secondary }}
+            className="text-2xl md:text-3xl font-bold uppercase tracking-wide mb-4"
+            style={{ color: themeColors.accentLifted }}
           >
             The Adoption Paradox
           </p>
@@ -229,7 +229,7 @@ const AnimatedValley = () => {
 
         {/* The Chicken-Egg Problem */}
         <div
-          className="rounded-2xl p-8 mb-12 bg-white"
+          className="rounded-2xl p-8 mb-8 bg-white"
           style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}
         >
           <div className="flex flex-wrap justify-center items-center gap-3 md:gap-5 mb-6">
@@ -263,40 +263,25 @@ const AnimatedValley = () => {
           </div>
         </div>
 
-        {/* Play button */}
-        <div className="flex justify-center mb-12">
-          {!isPlaying && (
-            <button
-              onClick={startAnimation}
-              className="px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-[1.02] flex items-center gap-3"
-              style={{
-                backgroundColor: themeColors.accent,
-                color: 'white',
-                boxShadow: '0 4px 16px rgba(0,0,0,0.1)'
-              }}
-            >
-              <span className="text-xl">▶</span>
-              {hasPlayed ? 'Replay the Journey' : 'Watch the Journey'}
-            </button>
-          )}
-
+        {/* Main visualization */}
+        <div
+          className="rounded-2xl p-6 md:p-10 bg-white relative"
+          style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}
+        >
+          {/* Phase indicator - only show during animation */}
           {isPlaying && phase >= 0 && (
-            <div
-              className="px-8 py-4 rounded-full bg-white"
-              style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.08)' }}
-            >
-              <div className="text-base font-semibold" style={{ color: themeColors.primary }}>
-                {phases[phase].name}
+            <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
+              <div
+                className="px-6 py-2 rounded-full bg-white"
+                style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.15)' }}
+              >
+                <div className="text-sm font-semibold whitespace-nowrap" style={{ color: themeColors.primary }}>
+                  {phases[phase].name}
+                </div>
               </div>
             </div>
           )}
-        </div>
 
-        {/* Main visualization */}
-        <div
-          className="rounded-2xl p-6 md:p-10 bg-white"
-          style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}
-        >
           <svg viewBox="0 0 800 420" className="w-full h-auto">
             <defs>
               <linearGradient id="startGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -332,17 +317,26 @@ const AnimatedValley = () => {
             {[...Array(9)].map((_, i) => (
               <line
                 key={i}
-                x1="60" y1={50 + i * 42}
+                x1="40" y1={50 + i * 42}
                 x2="780" y2={50 + i * 42}
                 stroke="#e5e7eb"
                 strokeWidth="1"
               />
             ))}
 
-            {/* Axis labels */}
-            <text x="15" y="65" fill="#9ca3af" fontSize="9" fontFamily="system-ui">HIGH</text>
-            <text x="15" y="200" fill="#9ca3af" fontSize="9" fontFamily="system-ui">MOTIVATION</text>
-            <text x="15" y="335" fill="#9ca3af" fontSize="9" fontFamily="system-ui">LOW</text>
+            {/* Axis label - rotated MOTIVATION on the left */}
+            <text
+              x="10"
+              y="210"
+              fill="#9ca3af"
+              fontSize="11"
+              fontFamily="system-ui"
+              fontWeight="600"
+              textAnchor="middle"
+              transform="rotate(-90, 10, 210)"
+            >
+              MOTIVATION
+            </text>
 
             {/* Valley zone - visible phases 1-3, fades after */}
             {phase >= 1 && phase <= 3 && (
@@ -644,6 +638,56 @@ const AnimatedValley = () => {
                 </text>
               </g>
             )}
+
+            {/* Play Button - centered initially, bottom for replay */}
+            {!isPlaying && (
+              <g className="cursor-pointer" onClick={startAnimation}>
+                {/* Large semi-transparent overlay to make clickable area bigger */}
+                <rect
+                  x="260"
+                  y={hasPlayed ? "340" : "150"}
+                  width="280"
+                  height={hasPlayed ? "70" : "120"}
+                  fill="transparent"
+                />
+
+                {/* Button background */}
+                <rect
+                  x="280"
+                  y={hasPlayed ? "360" : "170"}
+                  width="240"
+                  height="60"
+                  rx="12"
+                  fill={themeColors.accent}
+                  style={{
+                    filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.15))',
+                    transition: 'all 0.2s'
+                  }}
+                  className="hover:brightness-110"
+                />
+
+                {/* Play icon */}
+                <path
+                  d={hasPlayed
+                    ? "M 305 380 L 305 405 L 325 392.5 Z"
+                    : "M 305 190 L 305 210 L 325 200 Z"
+                  }
+                  fill="white"
+                />
+
+                {/* Button text */}
+                <text
+                  x="345"
+                  y={hasPlayed ? "397" : "205"}
+                  fill="white"
+                  fontSize="16"
+                  fontWeight="600"
+                  fontFamily="system-ui"
+                >
+                  {hasPlayed ? 'Replay Journey' : 'Watch the Journey'}
+                </text>
+              </g>
+            )}
           </svg>
 
           {/* Phase-specific caption */}
@@ -715,11 +759,6 @@ const AnimatedValley = () => {
               <div className="valley-fade-in">
                 <div className="text-lg mb-2" style={{ color: '#16a34a' }}>Self-sustaining. Wins drive practice. Practice drives wins.</div>
                 <div className="text-sm text-gray-500">The value is self-evident. This is just how you work now.</div>
-              </div>
-            )}
-            {phase === -1 && (
-              <div className="text-gray-400 text-sm">
-                Press play to see the AI adoption journey
               </div>
             )}
           </div>
