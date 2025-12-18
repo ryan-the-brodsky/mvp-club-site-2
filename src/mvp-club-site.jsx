@@ -209,8 +209,8 @@ const MVPClubWebsite = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <AnimatedSection>
-                <p 
-                  className="text-sm font-semibold uppercase tracking-wider mb-4"
+                <p
+                  className="text-lg font-semibold uppercase tracking-wider mb-4"
                   style={{ color: 'var(--color-accent-lifted)' }}
                 >
                   Strategic AI Transformation
@@ -320,7 +320,7 @@ const MVPClubWebsite = () => {
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <p
-                className="text-sm font-semibold uppercase tracking-wider mb-4"
+                className="text-lg font-semibold uppercase tracking-wider mb-4"
                 style={{ color: 'var(--color-secondary)' }}
               >
                 The AI Adoption Gap
@@ -550,8 +550,8 @@ const MVPClubWebsite = () => {
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p 
-                className="text-sm font-semibold uppercase tracking-wider mb-4"
+              <p
+                className="text-lg font-semibold uppercase tracking-wider mb-4"
                 style={{ color: 'var(--color-accent-lifted)' }}
               >
                 Our Philosophy
@@ -564,56 +564,6 @@ const MVPClubWebsite = () => {
                 But from individual employee to the Employee + AI Team. An inseparable 
                 collaboration where each brings irreplaceable strengths.
               </p>
-            </div>
-          </AnimatedSection>
-
-          {/* We Don't Add Complexity */}
-          <AnimatedSection>
-            <div className="max-w-4xl mx-auto mb-16">
-              <div
-                className="rounded-2xl p-8 md:p-12 bg-white"
-                style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}
-              >
-                <h3 className="font-display text-2xl md:text-3xl mb-8 text-center" style={{ color: 'var(--color-primary)' }}>
-                  We Don't Add Complexity. We Remove It.
-                </h3>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <div className="text-gray-500 text-sm uppercase tracking-wider mb-4">
-                      Your team doesn't need
-                    </div>
-                    <div className="space-y-3">
-                      {[
-                        "Knowledge without practice",
-                        "Another training program",
-                        "Another strategic initiative"
-                      ].map((item, i) => (
-                        <div key={i} className="flex items-start gap-3">
-                          <X size={18} style={{ color: 'var(--color-accent-soft)' }} className="flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-gray-500 text-sm uppercase tracking-wider mb-4">
-                      What they need
-                    </div>
-                    <div className="space-y-3">
-                      {[
-                        "Guided workflow design tailored to their processes",
-                        "AI integrated into existing work, not bolted on",
-                        "Quick wins that justify the investment"
-                      ].map((item, i) => (
-                        <div key={i} className="flex items-start gap-3">
-                          <CheckCircle2 size={18} style={{ color: 'var(--color-secondary)' }} className="flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </AnimatedSection>
 
@@ -733,8 +683,8 @@ const MVPClubWebsite = () => {
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p 
-                className="text-sm font-semibold uppercase tracking-wider mb-4"
+              <p
+                className="text-lg font-semibold uppercase tracking-wider mb-4"
                 style={{ color: 'var(--color-secondary)' }}
               >
                 Our Methodology
@@ -876,14 +826,14 @@ const MVPClubWebsite = () => {
           <AnimatedSection>
             <div className="flex items-center gap-3 mb-4">
               <Building2 size={24} style={{ color: 'var(--color-accent-lifted)' }} />
-              <p 
-                className="text-sm font-semibold uppercase tracking-wider"
+              <p
+                className="text-lg font-semibold uppercase tracking-wider"
                 style={{ color: 'var(--color-accent-lifted)' }}
               >
                 For Organizations
               </p>
             </div>
-            <h2 className="font-display text-3xl md:text-4xl text-white mb-3 max-w-2xl">
+            <h2 className="font-display text-3xl md:text-4xl text-white mb-6 max-w-2xl">
               4-Week Productivity Sprint
             </h2>
             <p className="text-xl text-white/90 mb-6 max-w-2xl font-semibold">
@@ -1055,8 +1005,8 @@ const MVPClubWebsite = () => {
           <AnimatedSection>
             <div className="flex items-center gap-3 mb-4">
               <GraduationCap size={24} style={{ color: 'var(--color-secondary)' }} />
-              <p 
-                className="text-sm font-semibold uppercase tracking-wider"
+              <p
+                className="text-lg font-semibold uppercase tracking-wider"
                 style={{ color: 'var(--color-secondary)' }}
               >
                 For Practitioners
@@ -1148,7 +1098,7 @@ const MVPClubWebsite = () => {
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <p
-                className="text-sm font-semibold uppercase tracking-wider mb-4"
+                className="text-lg font-semibold uppercase tracking-wider mb-4"
                 style={{ color: 'var(--color-accent-lifted)' }}
               >
                 About Us
@@ -1221,8 +1171,8 @@ const MVPClubWebsite = () => {
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p 
-                className="text-sm font-semibold uppercase tracking-wider mb-4"
+              <p
+                className="text-lg font-semibold uppercase tracking-wider mb-4"
                 style={{ color: 'var(--color-primary-lifted)' }}
               >
                 Community Voices

@@ -215,13 +215,13 @@ const AnimatedValley = () => {
         {/* Header */}
         <div className="text-center mb-8">
           <p
-            className="text-2xl md:text-3xl font-bold uppercase tracking-wide mb-4"
+            className="text-lg font-semibold uppercase tracking-wider mb-4"
             style={{ color: themeColors.accentLifted }}
           >
             The Adoption Paradox
           </p>
           <h2
-            className="font-display text-3xl md:text-4xl lg:text-5xl leading-tight text-white"
+            className="font-display text-3xl md:text-4xl leading-tight text-white"
           >
             Why Most People Quit—And How Coaching Changes That
           </h2>
