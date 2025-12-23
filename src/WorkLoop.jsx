@@ -200,7 +200,12 @@ const WorkLoop = () => {
           width: 180px;
           box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
           text-align: center;
-          animation: workloop-fadeIn 0.2s ease-out;
+          animation: workloop-popupFadeIn 0.15s ease-out;
+        }
+
+        @keyframes workloop-popupFadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
         }
 
         .workloop-detail-num {
@@ -361,7 +366,6 @@ const WorkLoop = () => {
           {/* Center content */}
           {activeStep === null ? (
             <div className="workloop-center-content">
-              <div className="workloop-center-icon">🔄</div>
               <div className="workloop-center-title">Continuous Loop</div>
               <div className="workloop-center-subtitle">Hover on a step to learn more</div>
             </div>
