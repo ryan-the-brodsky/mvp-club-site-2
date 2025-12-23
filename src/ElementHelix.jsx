@@ -4,6 +4,10 @@ const ElementHelix = () => {
   const humanAttributes = ['Strategy', 'Judgment', 'Context'];
   const aiAttributes = ['Speed', 'Patterns', 'Scale'];
 
+  // Base dimensions - all other values scale from these
+  const baseWidth = 280;
+  const baseHeight = 360;
+
   return (
     <div style={{
       display: 'flex',
@@ -20,13 +24,13 @@ const ElementHelix = () => {
         }
 
         @keyframes nodeFloat {
-          0%, 100% { transform: translateZ(70px); }
-          50% { transform: translateZ(70px) scale(1.02); }
+          0%, 100% { transform: translateZ(calc(70px * var(--helix-scale, 1))); }
+          50% { transform: translateZ(calc(70px * var(--helix-scale, 1))) scale(1.02); }
         }
 
         @keyframes nodeFloatBack {
-          0%, 100% { transform: translateZ(-70px); opacity: 0.5; }
-          50% { transform: translateZ(-70px) scale(1.02); opacity: 0.55; }
+          0%, 100% { transform: translateZ(calc(-70px * var(--helix-scale, 1))); opacity: 0.5; }
+          50% { transform: translateZ(calc(-70px * var(--helix-scale, 1))) scale(1.02); opacity: 0.55; }
         }
 
         @keyframes pulseConnection {
@@ -68,11 +72,22 @@ const ElementHelix = () => {
         }
 
         .helix-wrapper {
+          --helix-scale: 1;
+          --helix-width: 280px;
+          --helix-height: 360px;
+          --helix-node-size: 48px;
+          --helix-node-offset: 80px;
+          --helix-connection-width: 110px;
+          --helix-emergence-size: 72px;
+          --helix-gap: 2rem;
+          --helix-side-min-width: 100px;
+          --helix-font-scale: 1;
+
           display: flex;
           flex-direction: column;
           align-items: center;
           gap: 1.5rem;
-          perspective: 1200px;
+          perspective: calc(1200px * var(--helix-scale));
         }
 
         .helix-header-section {
@@ -81,7 +96,7 @@ const ElementHelix = () => {
         }
 
         .helix-header-label {
-          font-size: 0.65rem;
+          font-size: clamp(0.55rem, calc(0.65rem * var(--helix-font-scale)), 0.7rem);
           font-weight: 600;
           letter-spacing: 0.25em;
           text-transform: uppercase;
@@ -90,7 +105,7 @@ const ElementHelix = () => {
         }
 
         .helix-header-title {
-          font-size: 1.1rem;
+          font-size: clamp(0.9rem, calc(1.1rem * var(--helix-font-scale)), 1.2rem);
           font-weight: 500;
           color: rgba(255, 255, 255, 0.8);
           letter-spacing: 0.02em;
@@ -99,14 +114,14 @@ const ElementHelix = () => {
         .helix-main-section {
           display: flex;
           align-items: center;
-          gap: 2rem;
+          gap: var(--helix-gap);
         }
 
         .helix-side-labels {
           display: flex;
           flex-direction: column;
           gap: 0.75rem;
-          min-width: 100px;
+          min-width: var(--helix-side-min-width);
         }
 
         .helix-side-labels.right {
@@ -114,7 +129,7 @@ const ElementHelix = () => {
         }
 
         .helix-side-label-header {
-          font-size: 0.9rem;
+          font-size: clamp(0.75rem, calc(0.9rem * var(--helix-font-scale)), 1rem);
           font-weight: 600;
           margin-bottom: 0.5rem;
           letter-spacing: 0.05em;
@@ -124,7 +139,7 @@ const ElementHelix = () => {
         .helix-ai-color { color: #d4af37; }
 
         .helix-side-label-item {
-          font-size: 0.8rem;
+          font-size: clamp(0.65rem, calc(0.8rem * var(--helix-font-scale)), 0.85rem);
           color: rgba(255, 255, 255, 0.45);
           padding: 0.35rem 0;
           border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -150,8 +165,8 @@ const ElementHelix = () => {
 
         .helix-container {
           position: relative;
-          width: 280px;
-          height: 360px;
+          width: var(--helix-width);
+          height: var(--helix-height);
           transform-style: preserve-3d;
         }
 
@@ -173,8 +188,8 @@ const ElementHelix = () => {
         }
 
         .helix-node {
-          width: 48px;
-          height: 48px;
+          width: var(--helix-node-size);
+          height: var(--helix-node-size);
           border-radius: 6px;
           display: flex;
           flex-direction: column;
@@ -213,14 +228,14 @@ const ElementHelix = () => {
         }
 
         .helix-element-symbol {
-          font-size: 1.25rem;
+          font-size: clamp(1rem, calc(1.25rem * var(--helix-font-scale)), 1.4rem);
           font-weight: 600;
           letter-spacing: -0.02em;
           line-height: 1;
         }
 
         .helix-element-number {
-          font-size: 0.5rem;
+          font-size: clamp(0.4rem, calc(0.5rem * var(--helix-font-scale)), 0.55rem);
           font-weight: 500;
           opacity: 0.6;
           letter-spacing: 0.05em;
@@ -265,8 +280,8 @@ const ElementHelix = () => {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: 72px;
-          height: 72px;
+          width: var(--helix-emergence-size);
+          height: var(--helix-emergence-size);
           border-radius: 8px;
           background: linear-gradient(135deg,
             rgba(232, 121, 87, 0.08) 0%,
@@ -283,7 +298,7 @@ const ElementHelix = () => {
         }
 
         .helix-emergence-symbol {
-          font-size: 1.5rem;
+          font-size: clamp(1.2rem, calc(1.5rem * var(--helix-font-scale)), 1.7rem);
           font-weight: 600;
           background: linear-gradient(135deg, #e87957, #d4af37);
           -webkit-background-clip: text;
@@ -293,7 +308,7 @@ const ElementHelix = () => {
         }
 
         .helix-emergence-label {
-          font-size: 0.45rem;
+          font-size: clamp(0.35rem, calc(0.45rem * var(--helix-font-scale)), 0.5rem);
           font-weight: 600;
           letter-spacing: 0.1em;
           color: rgba(255, 255, 255, 0.5);
@@ -306,6 +321,7 @@ const ElementHelix = () => {
           animation-delay: 0.3s;
           opacity: 0;
           max-width: 400px;
+          padding: 0 1rem;
         }
 
         .helix-result-divider {
@@ -316,7 +332,7 @@ const ElementHelix = () => {
         }
 
         .helix-result-label {
-          font-size: 0.6rem;
+          font-size: clamp(0.5rem, calc(0.6rem * var(--helix-font-scale)), 0.65rem);
           font-weight: 600;
           letter-spacing: 0.3em;
           text-transform: uppercase;
@@ -325,7 +341,7 @@ const ElementHelix = () => {
         }
 
         .helix-result-headline {
-          font-size: 1.5rem;
+          font-size: clamp(1.1rem, calc(1.5rem * var(--helix-font-scale)), 1.7rem);
           font-weight: 600;
           letter-spacing: -0.01em;
           margin-bottom: 0.5rem;
@@ -345,7 +361,7 @@ const ElementHelix = () => {
         }
 
         .helix-result-subtext {
-          font-size: 0.85rem;
+          font-size: clamp(0.7rem, calc(0.85rem * var(--helix-font-scale)), 0.95rem);
           color: rgba(255, 255, 255, 0.45);
           font-weight: 400;
           line-height: 1.6;
@@ -355,26 +371,125 @@ const ElementHelix = () => {
           color: rgba(255, 255, 255, 0.7);
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
+        /* Large desktop */
+        @media (min-width: 1280px) {
+          .helix-wrapper {
+            --helix-scale: 1.1;
+            --helix-width: 300px;
+            --helix-height: 390px;
+            --helix-node-size: 52px;
+            --helix-node-offset: 88px;
+            --helix-connection-width: 120px;
+            --helix-emergence-size: 78px;
+            --helix-font-scale: 1.05;
+          }
+        }
+
+        /* Desktop */
+        @media (min-width: 1024px) and (max-width: 1279px) {
+          .helix-wrapper {
+            --helix-scale: 1;
+            --helix-width: 280px;
+            --helix-height: 360px;
+            --helix-node-size: 48px;
+            --helix-node-offset: 80px;
+            --helix-connection-width: 110px;
+            --helix-emergence-size: 72px;
+            --helix-font-scale: 1;
+          }
+        }
+
+        /* Tablet landscape */
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .helix-wrapper {
+            --helix-scale: 0.85;
+            --helix-width: 240px;
+            --helix-height: 310px;
+            --helix-node-size: 42px;
+            --helix-node-offset: 70px;
+            --helix-connection-width: 95px;
+            --helix-emergence-size: 62px;
+            --helix-gap: 1.5rem;
+            --helix-side-min-width: 85px;
+            --helix-font-scale: 0.9;
+          }
+        }
+
+        /* Tablet portrait / large phone */
+        @media (min-width: 480px) and (max-width: 767px) {
+          .helix-wrapper {
+            --helix-scale: 0.75;
+            --helix-width: 220px;
+            --helix-height: 280px;
+            --helix-node-size: 38px;
+            --helix-node-offset: 62px;
+            --helix-connection-width: 85px;
+            --helix-emergence-size: 56px;
+            --helix-gap: 1rem;
+            --helix-side-min-width: auto;
+            --helix-font-scale: 0.85;
+          }
+
           .helix-main-section {
             flex-direction: column;
-            gap: 1rem;
           }
 
           .helix-side-labels {
             flex-direction: row;
-            min-width: auto;
             gap: 1.5rem;
+            justify-content: center;
+          }
+
+          .helix-side-labels.right {
+            align-items: flex-start;
+          }
+        }
+
+        /* Mobile */
+        @media (max-width: 479px) {
+          .helix-wrapper {
+            --helix-scale: 0.65;
+            --helix-width: 200px;
+            --helix-height: 260px;
+            --helix-node-size: 34px;
+            --helix-node-offset: 55px;
+            --helix-connection-width: 75px;
+            --helix-emergence-size: 50px;
+            --helix-gap: 0.75rem;
+            --helix-side-min-width: auto;
+            --helix-font-scale: 0.8;
+          }
+
+          .helix-main-section {
+            flex-direction: column;
+          }
+
+          .helix-side-labels {
+            flex-direction: row;
+            gap: 1rem;
+            justify-content: center;
           }
 
           .helix-side-labels.right {
             align-items: flex-start;
           }
 
-          .helix-container {
-            width: 240px;
-            height: 300px;
+          .helix-result-section {
+            max-width: 280px;
+          }
+        }
+
+        /* Extra small mobile */
+        @media (max-width: 375px) {
+          .helix-wrapper {
+            --helix-scale: 0.55;
+            --helix-width: 180px;
+            --helix-height: 230px;
+            --helix-node-size: 30px;
+            --helix-node-offset: 48px;
+            --helix-connection-width: 65px;
+            --helix-emergence-size: 44px;
+            --helix-font-scale: 0.75;
           }
         }
       `}</style>
@@ -399,14 +514,15 @@ const ElementHelix = () => {
             <div className="helix-structure">
               {Array.from({ length: 7 }, (_, i) => {
                 const angle = (i / 7) * 360;
-                const yPos = (i / 6) * 320 + 20;
+                // Use percentage-based positioning relative to container height
+                const yPercent = (i / 6) * 88 + 6; // 6% to 94% of container
 
                 return (
                   <div
                     key={i}
                     className="helix-rung"
                     style={{
-                      top: `${yPos}px`,
+                      top: `${yPercent}%`,
                       transform: `translateX(-50%) rotateY(${angle}deg)`,
                     }}
                   >
@@ -414,7 +530,7 @@ const ElementHelix = () => {
                     <div
                       className="helix-node helix-human-node"
                       style={{
-                        left: '-80px',
+                        left: 'calc(-1 * var(--helix-node-offset))',
                         animationDelay: `${i * 0.3}s`,
                       }}
                     >
@@ -426,8 +542,8 @@ const ElementHelix = () => {
                     <div
                       className="helix-connection"
                       style={{
-                        width: '110px',
-                        left: '-55px',
+                        width: 'var(--helix-connection-width)',
+                        left: 'calc(-0.5 * var(--helix-connection-width))',
                         animationDelay: `${i * 0.2}s`,
                       }}
                     >
@@ -445,7 +561,7 @@ const ElementHelix = () => {
                     <div
                       className="helix-node helix-ai-node"
                       style={{
-                        right: '-80px',
+                        right: 'calc(-1 * var(--helix-node-offset))',
                         animationDelay: `${i * 0.3 + 0.15}s`,
                       }}
                     >
