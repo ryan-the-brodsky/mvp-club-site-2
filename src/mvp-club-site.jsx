@@ -1228,7 +1228,7 @@ const MVPClubWebsite = () => {
               ))}
             </div>
             <div className="text-white/50 text-sm">
-              © 2024 MVP Club Consulting
+              © 2025 MVP Club Consulting
             </div>
           </div>
         </div>
