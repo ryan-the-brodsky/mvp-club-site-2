@@ -192,7 +192,7 @@ const MVPClubWebsite = () => {
       {/* Hero Section */}
       <section 
         id="hero" 
-        className="min-h-screen flex items-center relative overflow-hidden"
+        className="min-h-screen flex items-center relative"
         style={{ backgroundColor: 'var(--color-primary)' }}
       >
         {/* Background elements */}

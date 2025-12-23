@@ -371,8 +371,8 @@ const ElementHelix = () => {
           color: rgba(255, 255, 255, 0.7);
         }
 
-        /* Large desktop */
-        @media (min-width: 1280px) {
+        /* Large desktop (1440px+) */
+        @media (min-width: 1440px) {
           .helix-wrapper {
             --helix-scale: 1.1;
             --helix-width: 300px;
@@ -385,8 +385,8 @@ const ElementHelix = () => {
           }
         }
 
-        /* Desktop */
-        @media (min-width: 1024px) and (max-width: 1279px) {
+        /* Desktop (1280-1439px) */
+        @media (min-width: 1280px) and (max-width: 1439px) {
           .helix-wrapper {
             --helix-scale: 1;
             --helix-width: 280px;
@@ -399,7 +399,29 @@ const ElementHelix = () => {
           }
         }
 
-        /* Tablet landscape */
+        /* Small desktop / large tablet (1024-1279px) - HIDE SIDE LABELS */
+        @media (min-width: 1024px) and (max-width: 1279px) {
+          .helix-wrapper {
+            --helix-scale: 0.9;
+            --helix-width: 260px;
+            --helix-height: 340px;
+            --helix-node-size: 44px;
+            --helix-node-offset: 75px;
+            --helix-connection-width: 100px;
+            --helix-emergence-size: 66px;
+            --helix-font-scale: 0.95;
+          }
+
+          .helix-side-labels {
+            display: none;
+          }
+
+          .helix-main-section {
+            gap: 0;
+          }
+        }
+
+        /* Tablet landscape (768-1023px) */
         @media (min-width: 768px) and (max-width: 1023px) {
           .helix-wrapper {
             --helix-scale: 0.85;
@@ -413,9 +435,17 @@ const ElementHelix = () => {
             --helix-side-min-width: 85px;
             --helix-font-scale: 0.9;
           }
+
+          .helix-side-labels {
+            display: none;
+          }
+
+          .helix-main-section {
+            gap: 0;
+          }
         }
 
-        /* Tablet portrait / large phone */
+        /* Tablet portrait / large phone (480-767px) */
         @media (min-width: 480px) and (max-width: 767px) {
           .helix-wrapper {
             --helix-scale: 0.75;
@@ -445,8 +475,8 @@ const ElementHelix = () => {
           }
         }
 
-        /* Mobile */
-        @media (max-width: 479px) {
+        /* Mobile (375-479px) */
+        @media (min-width: 375px) and (max-width: 479px) {
           .helix-wrapper {
             --helix-scale: 0.65;
             --helix-width: 200px;
@@ -479,8 +509,8 @@ const ElementHelix = () => {
           }
         }
 
-        /* Extra small mobile */
-        @media (max-width: 375px) {
+        /* Extra small mobile (<375px) */
+        @media (max-width: 374px) {
           .helix-wrapper {
             --helix-scale: 0.55;
             --helix-width: 180px;
@@ -490,6 +520,24 @@ const ElementHelix = () => {
             --helix-connection-width: 65px;
             --helix-emergence-size: 44px;
             --helix-font-scale: 0.75;
+          }
+
+          .helix-main-section {
+            flex-direction: column;
+          }
+
+          .helix-side-labels {
+            flex-direction: row;
+            gap: 0.75rem;
+            justify-content: center;
+          }
+
+          .helix-side-labels.right {
+            align-items: flex-start;
+          }
+
+          .helix-result-section {
+            max-width: 260px;
           }
         }
       `}</style>
