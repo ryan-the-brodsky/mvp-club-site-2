@@ -24,7 +24,7 @@ const MVPClubWebsite = () => {
     { id: 'organizations', label: 'For Organizations' },
     { id: 'practitioners', label: 'For Practitioners' },
     { id: 'team', label: 'About Us' },
-    { id: 'testimonials', label: 'Community' },
+    // { id: 'testimonials', label: 'Community' }, // Hidden until we have real testimonials
     { id: 'contact', label: 'Get Started' },
   ];
 
@@ -1167,8 +1167,8 @@ const MVPClubWebsite = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-24" style={{ backgroundColor: 'var(--color-background)' }}>
+      {/* Testimonials Section - Hidden until we have real testimonials */}
+      {false && <section id="testimonials" className="py-24" style={{ backgroundColor: 'var(--color-background)' }}>
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -1275,7 +1275,7 @@ const MVPClubWebsite = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section>}
 
       {/* CTA Section */}
       <section id="contact" className="py-24" style={{ backgroundColor: 'var(--color-background)' }}>
