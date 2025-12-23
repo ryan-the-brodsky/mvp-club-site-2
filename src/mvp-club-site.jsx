@@ -1372,12 +1372,12 @@ const MVPClubWebsite = () => {
             </AnimatedSection>
           </div>
 
-          {/* Quick contact */}
+          {/* Quick contact - Hidden until email is set up
           <AnimatedSection delay={300}>
             <div className="text-center mt-12">
               <p className="text-white/60 text-sm">
                 Not sure which path is right? Email us at{' '}
-                <a 
+                <a
                   href="mailto:hello@mvpclub.co"
                   className="underline hover:text-white transition-colors"
                   style={{ color: 'var(--color-accent-lifted)' }}
@@ -1387,6 +1387,7 @@ const MVPClubWebsite = () => {
               </p>
             </div>
           </AnimatedSection>
+          */}
         </div>
       </section>
 
