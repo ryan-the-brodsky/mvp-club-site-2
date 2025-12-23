@@ -1116,33 +1116,34 @@ const MVPClubWebsite = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                name: 'Ryan',
-                role: 'Founder & Lead Consultant',
-                bio: 'Strategic transformation leader with deep experience in helping organizations navigate technology adoption and cultural change.',
-                expertise: ['Strategic Consulting', 'AI Adoption', 'Organizational Change']
+                name: 'Ryan Brodsky',
+                role: 'Technical Implementation Manager',
+                bio: 'Software Developer who uses AI to create customer support articles, prototype applications, and has shipped 50+ feature requests using AI-assisted development.',
+                expertise: ['Technical Implementation', 'AI Development', 'Software Engineering'],
+                image: '/ryan-brodsky.jpg'
               },
               {
-                name: 'Co-Founder',
-                role: 'Community & Education',
-                bio: 'Passionate about building learning communities and creating pathways for people to develop new capabilities.',
-                expertise: ['Community Building', 'Course Design', 'Facilitation']
+                name: 'Matt Hastings',
+                role: 'AI Adoption Lead',
+                bio: 'Has run over 100 AI adoption coaching sessions. Manages AI implementation team at General Assembly and designs AI training products for Fortune 500 clients.',
+                expertise: ['AI Coaching', 'Training Design', 'Enterprise Solutions'],
+                image: '/matt-hastings.png'
               },
               {
-                name: 'Co-Founder',
-                role: 'Technology & Product',
-                bio: 'Bringing technical depth and hands-on AI expertise to ensure our methods are grounded in real-world application.',
-                expertise: ['Technical Implementation', 'AI Systems', 'Product Development']
+                name: 'Jill Ozovek',
+                role: 'AI Coach & Learning Designer',
+                bio: 'Certified Professional Coach who led learning design including AI programming and agentic workflows at GA. Sets up AI workflows for startups and runs AI coaching sessions for MVP Club.',
+                expertise: ['Professional Coaching', 'Learning Design', 'AI Workflows'],
+                image: '/jill-ozovek.jpg'
               }
             ].map((member, i) => (
               <AnimatedSection key={i} delay={i * 100}>
                 <div className="card-hover bg-white p-8 rounded-2xl text-center h-full">
-                  {/* Placeholder avatar */}
-                  <div 
-                    className="w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center"
-                    style={{ backgroundColor: i === 0 ? 'var(--color-primary)' : i === 1 ? 'var(--color-secondary)' : 'var(--color-secondary-lifted)' }}
-                  >
-                    <Users size={40} style={{ color: 'var(--color-accent-lifted)' }} />
-                  </div>
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-24 h-24 rounded-full mx-auto mb-6 object-cover"
+                  />
                   <h3 className="font-display text-xl mb-1" style={{ color: 'var(--color-primary)' }}>
                     {member.name}
                   </h3>
