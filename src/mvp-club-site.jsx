@@ -15,7 +15,7 @@ const MVPClubWebsite = () => {
 
   // Initialize theme on mount
   useEffect(() => {
-    const theme = generateTheme(COLOR_PALETTES.default);
+    const theme = generateTheme(COLOR_PALETTES.dusk);
     applyTheme(theme);
   }, []);
 
