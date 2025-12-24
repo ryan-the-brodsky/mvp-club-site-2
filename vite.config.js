@@ -4,5 +4,6 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/mvp-club-site-2/', // GitHub Pages base path
+  // Use subdirectory for GitHub Pages, root for Vercel/other hosts
+  base: process.env.GITHUB_ACTIONS ? '/mvp-club-site-2/' : '/',
 })
