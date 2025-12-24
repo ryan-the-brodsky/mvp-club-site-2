@@ -70,10 +70,25 @@ const AnimatedValley = () => {
     label: isMobile ? 14 : 10,
     labelLarge: isMobile ? 16 : 11,
     axis: isMobile ? 14 : 11,
-    button: isMobile ? 20 : 16,
+    button: isMobile ? 24 : 16,
     coach: isMobile ? 20 : 16,
     coachSmall: isMobile ? 16 : 14,
     coachTiny: isMobile ? 14 : 12,
+  };
+
+  // Responsive button dimensions (much larger on mobile)
+  const buttonDims = {
+    width: isMobile ? 340 : 240,
+    height: isMobile ? 80 : 60,
+    x: isMobile ? 230 : 280,
+    yInitial: isMobile ? 160 : 170,
+    yReplay: isMobile ? 350 : 360,
+    rx: isMobile ? 16 : 12,
+    // Play icon triangle points
+    iconX: isMobile ? 260 : 305,
+    iconSize: isMobile ? 30 : 20,
+    // Text position
+    textX: isMobile ? 400 : 345,
   };
 
   const phases = [
@@ -692,20 +707,20 @@ const AnimatedValley = () => {
               <g className="cursor-pointer" onClick={startAnimation}>
                 {/* Large semi-transparent overlay to make clickable area bigger */}
                 <rect
-                  x="260"
-                  y={hasPlayed ? "340" : "150"}
-                  width="280"
-                  height={hasPlayed ? "70" : "120"}
+                  x={buttonDims.x - 20}
+                  y={hasPlayed ? buttonDims.yReplay - 20 : buttonDims.yInitial - 20}
+                  width={buttonDims.width + 40}
+                  height={buttonDims.height + 40}
                   fill="transparent"
                 />
 
                 {/* Button background */}
                 <rect
-                  x="280"
-                  y={hasPlayed ? "360" : "170"}
-                  width="240"
-                  height="60"
-                  rx="12"
+                  x={buttonDims.x}
+                  y={hasPlayed ? buttonDims.yReplay : buttonDims.yInitial}
+                  width={buttonDims.width}
+                  height={buttonDims.height}
+                  rx={buttonDims.rx}
                   fill={themeColors.accent}
                   style={{
                     filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.15))',
@@ -717,20 +732,21 @@ const AnimatedValley = () => {
                 {/* Play icon */}
                 <path
                   d={hasPlayed
-                    ? "M 305 380 L 305 405 L 325 392.5 Z"
-                    : "M 305 190 L 305 210 L 325 200 Z"
+                    ? `M ${buttonDims.iconX} ${buttonDims.yReplay + buttonDims.height/2 - buttonDims.iconSize/2} L ${buttonDims.iconX} ${buttonDims.yReplay + buttonDims.height/2 + buttonDims.iconSize/2} L ${buttonDims.iconX + buttonDims.iconSize * 0.8} ${buttonDims.yReplay + buttonDims.height/2} Z`
+                    : `M ${buttonDims.iconX} ${buttonDims.yInitial + buttonDims.height/2 - buttonDims.iconSize/2} L ${buttonDims.iconX} ${buttonDims.yInitial + buttonDims.height/2 + buttonDims.iconSize/2} L ${buttonDims.iconX + buttonDims.iconSize * 0.8} ${buttonDims.yInitial + buttonDims.height/2} Z`
                   }
                   fill="white"
                 />
 
                 {/* Button text */}
                 <text
-                  x="345"
-                  y={hasPlayed ? "397" : "205"}
+                  x={buttonDims.textX}
+                  y={hasPlayed ? buttonDims.yReplay + buttonDims.height/2 + fontSize.button/3 : buttonDims.yInitial + buttonDims.height/2 + fontSize.button/3}
                   fill="white"
                   fontSize={fontSize.button}
                   fontWeight="600"
                   fontFamily="system-ui"
+                  textAnchor="middle"
                 >
                   {hasPlayed ? 'Replay Journey' : 'Watch the Journey'}
                 </text>
