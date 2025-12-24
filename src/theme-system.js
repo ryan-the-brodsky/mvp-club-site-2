@@ -37,6 +37,15 @@ export const COLOR_PALETTES = {
     background: '#faf5f0', // Warm Stone
   },
 
+  // Navy + Slate Blue (from Color Explorer)
+  dusk: {
+    primary: '#081f3f',    // Dark Navy
+    secondary: '#15465b',  // Slate Blue
+    accent: '#d97706',     // Amber
+    accentSoft: '#eba714', // Golden Yellow
+    background: '#faf5f0', // Warm Stone
+  },
+
   // Blue + Teal
   ocean: {
     primary: '#0c4a6e',    // Deep Ocean Blue

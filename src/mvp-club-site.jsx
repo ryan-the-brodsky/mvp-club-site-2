@@ -259,7 +259,7 @@ const MVPClubWebsite = () => {
             <AnimatedSection delay={400} className="hidden lg:block">
               <div
                 className="relative p-10 rounded-2xl"
-                style={{ backgroundColor: 'rgba(17, 94, 89, 0.3)' }}
+                style={{ backgroundColor: 'var(--color-primary-lifted)' }}
               >
                 <div className="space-y-6">
                   {/* Visual representation of Human + AI */}
@@ -277,14 +277,14 @@ const MVPClubWebsite = () => {
                   </div>
 
                   <div className="flex items-center justify-center py-2">
-                    <div className="flex-1 h-0.5" style={{ backgroundColor: 'var(--color-accent-soft-muted)' }} />
+                    <div className="flex-1 h-0.5" style={{ backgroundColor: 'var(--color-accent-muted)' }} />
                     <div
                       className="w-14 h-14 rounded-full flex items-center justify-center text-2xl font-bold mx-6 flex-shrink-0"
                       style={{ backgroundColor: 'var(--color-accent)', color: 'white' }}
                     >
                       +
                     </div>
-                    <div className="flex-1 h-0.5" style={{ backgroundColor: 'var(--color-accent-soft-muted)' }} />
+                    <div className="flex-1 h-0.5" style={{ backgroundColor: 'var(--color-accent-muted)' }} />
                   </div>
 
                   <div className="flex items-center gap-5">
@@ -953,10 +953,13 @@ const MVPClubWebsite = () => {
                     <div
                       key={i}
                       className="p-4 rounded-lg"
-                      style={{ backgroundColor: 'var(--color-accent)' }}
+                      style={{
+                        backgroundColor: 'rgba(255,255,255,0.08)',
+                        borderLeft: '3px solid var(--color-accent-lifted)'
+                      }}
                     >
-                      <div className="font-semibold text-white mb-1">{deliverable.title}</div>
-                      <div className="text-white/80 text-sm">{deliverable.desc}</div>
+                      <div className="font-semibold mb-1" style={{ color: 'var(--color-accent-lifted)' }}>{deliverable.title}</div>
+                      <div className="text-white/70 text-sm">{deliverable.desc}</div>
                     </div>
                   ))}
                 </div>
