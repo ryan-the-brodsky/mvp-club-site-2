@@ -232,7 +232,8 @@ const AnimatedValley = () => {
           className="rounded-2xl p-8 mb-8 bg-white"
           style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}
         >
-          <div className="flex flex-wrap justify-center items-center gap-3 md:gap-5 mb-6">
+          {/* Desktop: horizontal layout with right arrows */}
+          <div className="hidden md:flex justify-center items-center gap-5 mb-6">
             <div className="p-5 rounded-xl text-center bg-gray-50">
               <div className="text-gray-700 text-lg leading-relaxed">
                 To <strong style={{ color: themeColors.secondary }}>see the value</strong><br />
@@ -253,6 +254,31 @@ const AnimatedValley = () => {
                 you need to see the value
               </div>
             </div>
+          </div>
+
+          {/* Mobile: vertical layout with down arrows */}
+          <div className="flex md:hidden flex-col items-center gap-3 mb-6">
+            <div className="p-5 rounded-xl text-center bg-gray-50 w-full max-w-sm">
+              <div className="text-gray-700 text-lg leading-relaxed">
+                To <strong style={{ color: themeColors.secondary }}>see the value</strong><br />
+                you need to be good at it
+              </div>
+            </div>
+            <div className="text-3xl" style={{ color: themeColors.secondary }}>↓</div>
+            <div className="p-5 rounded-xl text-center bg-gray-50 w-full max-w-sm">
+              <div className="text-gray-700 text-lg leading-relaxed">
+                To <strong style={{ color: themeColors.secondary }}>get good</strong><br />
+                you need to practice
+              </div>
+            </div>
+            <div className="text-3xl" style={{ color: themeColors.secondary }}>↓</div>
+            <div className="p-5 rounded-xl text-center bg-gray-50 w-full max-w-sm">
+              <div className="text-gray-700 text-lg leading-relaxed">
+                To <strong style={{ color: themeColors.secondary }}>keep practicing</strong><br />
+                you need to see the value
+              </div>
+            </div>
+            <div className="text-3xl" style={{ color: themeColors.secondary }}>↺</div>
           </div>
           <div className="w-32 h-1 mb-6 rounded-full mx-auto" style={{ backgroundColor: themeColors.accent }}></div>
           <div className="text-center px-4">
