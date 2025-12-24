@@ -854,13 +854,15 @@ const MVPClubWebsite = () => {
                   ))}
                 </div>
 
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="mt-8 w-full py-4 rounded-lg font-semibold transition-all duration-200 hover:scale-105"
+                <a
+                  href="https://calendly.com/d/cybv-947-s8m/discovery-call"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 w-full py-4 rounded-lg font-semibold transition-all duration-200 hover:scale-105 block text-center"
                   style={{ backgroundColor: 'var(--color-accent)', color: 'white' }}
                 >
                   Schedule a Discovery Call
-                </button>
+                </a>
               </div>
             </div>
           </AnimatedSection>
@@ -1191,7 +1193,7 @@ const MVPClubWebsite = () => {
                   ))}
                 </div>
                 <a
-                  href="https://calendly.com"
+                  href="https://calendly.com/d/cybv-947-s8m/discovery-call"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full py-4 rounded-lg font-semibold text-center transition-all duration-200 hover:scale-105"
