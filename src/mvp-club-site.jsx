@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ArrowRight, Users, Zap, Target, RefreshCw, Building2, GraduationCap, CheckCircle2, Quote, ChevronDown, Sparkles, Brain, Compass, Layers, TrendingUp, Shield, Calendar, MessageCircle } from 'lucide-react';
 import ColorExplorer from './ColorExplorer';
 import { COLOR_PALETTES, generateTheme, applyTheme } from './theme-system';
-import logoImage from './mvp-club-logo.jpeg';
+import logoImage from './mvp-club-logo.svg';
 import AnimatedValley from './AnimatedValley';
 import ElementHelix from './ElementHelix';
 import WorkLoop from './WorkLoop';

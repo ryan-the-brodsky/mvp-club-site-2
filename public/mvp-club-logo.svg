@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- MVP Club Logo - Three Interlocking Rings -->
+  <!-- Transparent background with amber/gold colors from site palette -->
+
+  <defs>
+    <linearGradient id="amberGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d97706" />
+      <stop offset="100%" style="stop-color:#b45309" />
+    </linearGradient>
+  </defs>
+
+  <!-- Three interlocking C-shaped rings forming a trinity pattern -->
+  <!-- Each ring is a thick arc (annulus segment) -->
+
+  <!-- Top ring - horseshoe shape opening downward -->
+  <path d="
+    M 100 22
+    A 48 48 0 1 1 100 118
+    A 32 32 0 1 0 100 22
+    Z
+  " fill="url(#amberGold)" />
+
+  <!-- Bottom-left ring - horseshoe opening to upper-right -->
+  <path d="
+    M 41 153
+    A 48 48 0 1 1 117 71
+    A 32 32 0 1 0 41 153
+    Z
+  " fill="url(#amberGold)" />
+
+  <!-- Bottom-right ring - horseshoe opening to upper-left -->
+  <path d="
+    M 159 153
+    A 48 48 0 1 0 83 71
+    A 32 32 0 1 1 159 153
+    Z
+  " fill="url(#amberGold)" />
+</svg>
